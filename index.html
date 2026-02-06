@@ -255,20 +255,32 @@
         <!-- ///////////////////////////////////////////// -->
         <!--Service-->
         <div class="Services Section isBlack" id="service" data-theme="black" data-ui="black" data-animate="false">
-          <!-- 背景オフィス写真（白黒）3列×4行=12枚タイル -->
+          <!-- 背景オフィス写真（白黒）3列×6行=18枚タイル -->
           <div class="Services_BG_Images">
-            <div class="Services_BG_Image"><img src="img/260128_0017.jpg" alt=""></div>
-            <div class="Services_BG_Image"><img src="img/260128_0018.jpg" alt=""></div>
-            <div class="Services_BG_Image"><img src="img/260128_0026.jpg" alt=""></div>
-            <div class="Services_BG_Image"><img src="img/260128_0031.jpg" alt=""></div>
-            <div class="Services_BG_Image"><img src="img/260128_0017.jpg" alt=""></div>
-            <div class="Services_BG_Image"><img src="img/260128_0018.jpg" alt=""></div>
-            <div class="Services_BG_Image"><img src="img/260128_0026.jpg" alt=""></div>
-            <div class="Services_BG_Image"><img src="img/260128_0031.jpg" alt=""></div>
-            <div class="Services_BG_Image"><img src="img/260128_0017.jpg" alt=""></div>
-            <div class="Services_BG_Image"><img src="img/260128_0018.jpg" alt=""></div>
-            <div class="Services_BG_Image"><img src="img/260128_0026.jpg" alt=""></div>
-            <div class="Services_BG_Image"><img src="img/260128_0031.jpg" alt=""></div>
+            <!-- Row 1: 指定画像 上段3枚（真ん中ロゴ） -->
+            <div class="Services_BG_Image"><img src="img/web/260128_0017.jpg" alt=""></div>
+            <div class="Services_BG_Image"><img src="img/web/260128_0018.jpg" alt=""></div>
+            <div class="Services_BG_Image"><img src="img/web/260128_0026.jpg" alt=""></div>
+            <!-- Row 2 -->
+            <div class="Services_BG_Image"><img src="img/web/260128_0005.jpg" alt=""></div>
+            <div class="Services_BG_Image"><img src="img/web/260128_0010.jpg" alt=""></div>
+            <div class="Services_BG_Image"><img src="img/web/260128_0012.jpg" alt=""></div>
+            <!-- Row 3 -->
+            <div class="Services_BG_Image"><img src="img/web/260128_0014.jpg" alt=""></div>
+            <div class="Services_BG_Image"><img src="img/web/260128_0019.jpg" alt=""></div>
+            <div class="Services_BG_Image"><img src="img/web/260128_0021.jpg" alt=""></div>
+            <!-- Row 4 -->
+            <div class="Services_BG_Image"><img src="img/web/260128_0022.jpg" alt=""></div>
+            <div class="Services_BG_Image"><img src="img/web/260128_0023.jpg" alt=""></div>
+            <div class="Services_BG_Image"><img src="img/web/260128_0027.jpg" alt=""></div>
+            <!-- Row 5 -->
+            <div class="Services_BG_Image"><img src="img/web/260128_0029.jpg" alt=""></div>
+            <div class="Services_BG_Image"><img src="img/web/260128_0035.jpg" alt=""></div>
+            <div class="Services_BG_Image"><img src="img/web/260128_0037.jpg" alt=""></div>
+            <!-- Row 6: 最下段（ロゴが見える写真） -->
+            <div class="Services_BG_Image"><img src="img/web/260128_0012.jpg" alt=""></div>
+            <div class="Services_BG_Image"><img src="img/web/260128_0031.jpg" alt=""></div>
+            <div class="Services_BG_Image"><img src="img/web/260128_0014.jpg" alt=""></div>
           </div>
           <div class="Container">
             <h2 class="AnimTargetServices1">
@@ -699,7 +711,7 @@
 
           <!-- メンバーモーダル -->
           <!--金子 大羅-->
-          <div class="MemberModal js-member-modal" id="memberModal-kaneko">
+          <div class="MemberModal js-member-modal" id="memberModal-kaneko" data-member-id="kaneko">
             <div class="MemberModal_Overlay js-member-modal-close"></div>
             <div class="MemberModal_Content">
               <button class="MemberModal_Close js-member-modal-close" aria-label="閉じる">&times;</button>
@@ -716,10 +728,18 @@
                   </div>
                 </div>
               </div>
+              <div class="MemberModal_Nav">
+                <button class="MemberModal_NavBtn js-member-nav" data-dir="prev" aria-label="前のメンバー">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                </button>
+                <button class="MemberModal_NavBtn js-member-nav" data-dir="next" aria-label="次のメンバー">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 6 15 12 9 18"></polyline></svg>
+                </button>
+              </div>
             </div>
           </div>
           <!--川上 雄三-->
-          <div class="MemberModal js-member-modal" id="memberModal-kawakami">
+          <div class="MemberModal js-member-modal" id="memberModal-kawakami" data-member-id="kawakami">
             <div class="MemberModal_Overlay js-member-modal-close"></div>
             <div class="MemberModal_Content">
               <button class="MemberModal_Close js-member-modal-close" aria-label="閉じる">&times;</button>
@@ -736,10 +756,18 @@
                   </div>
                 </div>
               </div>
+              <div class="MemberModal_Nav">
+                <button class="MemberModal_NavBtn js-member-nav" data-dir="prev" aria-label="前のメンバー">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                </button>
+                <button class="MemberModal_NavBtn js-member-nav" data-dir="next" aria-label="次のメンバー">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 6 15 12 9 18"></polyline></svg>
+                </button>
+              </div>
             </div>
           </div>
           <!--小川 匠-->
-          <div class="MemberModal js-member-modal" id="memberModal-ogawa">
+          <div class="MemberModal js-member-modal" id="memberModal-ogawa" data-member-id="ogawa">
             <div class="MemberModal_Overlay js-member-modal-close"></div>
             <div class="MemberModal_Content">
               <button class="MemberModal_Close js-member-modal-close" aria-label="閉じる">&times;</button>
@@ -757,10 +785,18 @@
                   </div>
                 </div>
               </div>
+              <div class="MemberModal_Nav">
+                <button class="MemberModal_NavBtn js-member-nav" data-dir="prev" aria-label="前のメンバー">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                </button>
+                <button class="MemberModal_NavBtn js-member-nav" data-dir="next" aria-label="次のメンバー">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 6 15 12 9 18"></polyline></svg>
+                </button>
+              </div>
             </div>
           </div>
           <!--鵜川 くるみ-->
-          <div class="MemberModal js-member-modal" id="memberModal-ukawa">
+          <div class="MemberModal js-member-modal" id="memberModal-ukawa" data-member-id="ukawa">
             <div class="MemberModal_Overlay js-member-modal-close"></div>
             <div class="MemberModal_Content">
               <button class="MemberModal_Close js-member-modal-close" aria-label="閉じる">&times;</button>
@@ -778,10 +814,18 @@
                   </div>
                 </div>
               </div>
+              <div class="MemberModal_Nav">
+                <button class="MemberModal_NavBtn js-member-nav" data-dir="prev" aria-label="前のメンバー">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                </button>
+                <button class="MemberModal_NavBtn js-member-nav" data-dir="next" aria-label="次のメンバー">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 6 15 12 9 18"></polyline></svg>
+                </button>
+              </div>
             </div>
           </div>
           <!--井上 望-->
-          <div class="MemberModal js-member-modal" id="memberModal-inoue">
+          <div class="MemberModal js-member-modal" id="memberModal-inoue" data-member-id="inoue">
             <div class="MemberModal_Overlay js-member-modal-close"></div>
             <div class="MemberModal_Content">
               <button class="MemberModal_Close js-member-modal-close" aria-label="閉じる">&times;</button>
@@ -794,6 +838,14 @@
                   <div class="MemberModal_Detail">
                   </div>
                 </div>
+              </div>
+              <div class="MemberModal_Nav">
+                <button class="MemberModal_NavBtn js-member-nav" data-dir="prev" aria-label="前のメンバー">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                </button>
+                <button class="MemberModal_NavBtn js-member-nav" data-dir="next" aria-label="次のメンバー">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 6 15 12 9 18"></polyline></svg>
+                </button>
               </div>
             </div>
           </div>

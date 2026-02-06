@@ -1336,7 +1336,7 @@ body.Page_Contact.menu_closing_stage2 .Menu {
   z-index: 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
   gap: 4px;
 }
 .Services_BG_Image {
@@ -1829,14 +1829,14 @@ body.modal-open {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 10%;/* 顔寄り：胸上切り */
-  transform: scale(1.4);/* GO Inc.風に顔をズームアップ */
-  transform-origin: center 15%;
-  filter: grayscale(100%);/* モノクロ */
+  object-position: center 20%;
+  transform: scale(1.15);
+  transform-origin: center 20%;
+  filter: grayscale(100%);
   transition: transform 0.5s ease, filter 0.5s ease;
 }
 .Member_Thumb:hover .Member_Thumb_Image img {
-  transform: scale(1.45);
+  transform: scale(1.2);
   filter: grayscale(60%);
 }
 .Member_Thumb_Info {
@@ -1912,7 +1912,7 @@ body.modal-open {
   transform: translateY(0);
 }
 
-/*--- メンバーモーダル（GO Inc.風） ---*/
+/*--- メンバーパネル（GO Inc.風 右スライドイン） ---*/
 .MemberModal {
   position: fixed;
   top: 0;
@@ -1921,14 +1921,10 @@ body.modal-open {
   height: 100%;
   z-index: 999999;
   display: flex;
-  align-items: stretch;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.4s ease, visibility 0.4s ease;
+  pointer-events: none;
 }
 .MemberModal.is-active {
-  opacity: 1;
-  visibility: visible;
+  pointer-events: auto;
 }
 .MemberModal_Overlay {
   position: absolute;
@@ -1936,69 +1932,81 @@ body.modal-open {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(0, 0, 0, 0.35);
   cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.MemberModal.is-active .MemberModal_Overlay {
+  opacity: 1;
 }
 .MemberModal_Content {
-  position: relative;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 55%;
+  max-width: 700px;
+  height: 100%;
+  background: #f5f5f5;
+  transform: translateX(100%);
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  overflow-y: auto;
+  padding: 50px 40px 40px;
   z-index: 2;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 60px 40px;
-  overflow-y: auto;
+}
+.MemberModal.is-active .MemberModal_Content {
+  transform: translateX(0);
 }
 .MemberModal_Close {
-  position: fixed;
-  top: 30px;
-  right: 40px;
+  position: absolute;
+  top: 16px;
+  right: 16px;
   z-index: 10;
   background: none;
   border: none;
-  font-size: 40px;
+  font-size: 36px;
   font-weight: 300;
-  color: #0a0a0a;
+  color: #333;
   cursor: pointer;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 .MemberModal_Close:hover {
   transform: rotate(90deg);
+  color: #000;
 }
 .MemberModal_Inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: start;
-  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex: 1;
 }
 .MemberModal_Image {
-  position: sticky;
-  top: 60px;
   overflow: hidden;
+  width: 100%;
+  max-width: 320px;
 }
 .MemberModal_Image img {
   width: 100%;
   aspect-ratio: 3/4;
   object-fit: cover;
-  object-position: center 0%;/* 胸でカット */
-  transform: scale(1.5);/* 大きくズームして胸上に寄せる */
-  transform-origin: center 8%;
-  filter: grayscale(100%);/* モノクロ */
+  object-position: center 20%;
+  transform: scale(1.1);
+  transform-origin: center 20%;
+  filter: grayscale(100%);
   display: block;
 }
 .MemberModal_Profile {
-  padding-top: 30px;
+  padding-top: 10px;
 }
 .MemberModal_Name_Ja {
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 700;
   letter-spacing: 0.05em;
   color: #0a0a0a;
@@ -2006,24 +2014,24 @@ body.modal-open {
   font-family: "Noto Sans JP", sans-serif;
 }
 .MemberModal_Name_En {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   letter-spacing: 0.05em;
-  color: #0a0a0a;
+  color: #555;
   margin-bottom: 8px;
   font-family: "Montserrat", sans-serif;
 }
 .MemberModal_Position {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.05em;
   color: #777;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   font-family: "Noto Sans JP", "Montserrat", sans-serif;
 }
 .MemberModal_Detail {
   font-family: "Noto Sans JP", sans-serif;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 2;
   color: #333;
   font-weight: 400;
@@ -2036,25 +2044,43 @@ body.modal-open {
   margin-bottom: 0;
 }
 
-/* 旧Office_Image（互換性のため残す） */
-.Office_Image {
-  margin: 80px 0;
-  width: 100%;
-  overflow: hidden;
+/* メンバーナビゲーション矢印（右下） */
+.MemberModal_Nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 30px;
 }
-.Office_Image img {
-  width: 100%;
-  height: auto;
-  display: block;
-  filter: grayscale(100%);/* モノクロ */
-  opacity: 0.6;
-  transition: opacity 0.6s ease, transform 0.8s ease, filter 0.6s ease;
+.MemberModal_NavBtn {
+  width: 48px;
+  height: 48px;
+  border: 1.5px solid #333;
+  border-radius: 0;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  color: #333;
 }
-.Office_Image:hover img {
-  opacity: 0.85;
-  transform: scale(1.02);
-  filter: grayscale(70%);
+.MemberModal_NavBtn:hover {
+  background: #333;
+  color: #fff;
 }
+.MemberModal_NavBtn svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* クリック時の一瞬拡大アニメーション */
+.Member_Thumb.is-clicked .Member_Thumb_Image img {
+  transform: scale(1.3);
+  transition: transform 0.2s ease;
+}
+
 @media (max-width: 1200px) {
   .Member {
     padding-top: 100px;
@@ -2067,14 +2093,10 @@ body.modal-open {
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
   }
-  .Office_Image {
-    margin: 60px 0;
-  }
 }
 @media (max-width: 960px) {
-  .MemberModal_Inner {
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
+  .MemberModal_Content {
+    width: 70%;
   }
 }
 @media (max-width: 767px) {
@@ -2104,40 +2126,39 @@ body.modal-open {
   .Member_Section_Title {
     font-size: 18px;
   }
-  /* モーダル（モバイル） */
+  /* パネル（モバイル） */
   .MemberModal_Content {
-    padding: 50px 20px;
+    width: 88%;
+    padding: 40px 20px 30px;
   }
-  .MemberModal_Inner {
-    grid-template-columns: 1fr;
-    gap: 20px;
+  .MemberModal_Close {
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    width: 40px;
+    height: 40px;
   }
   .MemberModal_Image {
-    position: relative;
-    top: auto;
-    max-width: 300px;
-    margin: 0 auto;
+    max-width: 100%;
   }
   .MemberModal_Image img {
     aspect-ratio: 1/1;
-    filter: grayscale(100%);/* モノクロ */
-    transform: scale(1.5);
-    transform-origin: center 8%;
-    object-position: center 0%;
-  }
-  .MemberModal_Close {
-    top: 15px;
-    right: 15px;
-    font-size: 32px;
+    transform: scale(1.1);
+    transform-origin: center 20%;
+    object-position: center 20%;
   }
   .MemberModal_Name_Ja {
-    font-size: 24px;
+    font-size: 22px;
   }
   .MemberModal_Name_En {
-    font-size: 15px;
+    font-size: 14px;
   }
   .MemberModal_Detail {
     font-size: 13px;
+  }
+  .MemberModal_NavBtn {
+    width: 42px;
+    height: 42px;
   }
 }
 /**********************************/

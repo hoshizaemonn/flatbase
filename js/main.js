@@ -483,9 +483,12 @@ observer.observe(section);
 // }
 
 
-//----------  MEMBER セクション アニメーション & モーダル  ----------//
+//----------  MEMBER セクション アニメーション & パネル  ----------//
 
 document.addEventListener('DOMContentLoaded', () => {
+
+  // === メンバーの順序定義（矢印ナビ用） ===
+  const memberOrder = ['kaneko', 'kawakami', 'ogawa', 'ukawa', 'inoue'];
 
   // === サムネイルのスクロールアニメーション ===
   const memberThumbs = document.querySelectorAll('.js-member-thumb');
@@ -527,23 +530,39 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  // === メンバーモーダル ===
+  // === メンバーパネル（右スライドイン） ===
   const thumbs = document.querySelectorAll('.js-member-thumb');
   const modals = document.querySelectorAll('.js-member-modal');
 
-  // サムネイルクリックでモーダルを開く
+  // パネルを開く処理
+  function openMemberPanel(memberId) {
+    const modal = document.getElementById('memberModal-' + memberId);
+    if (modal) {
+      // 他のパネルが開いていれば閉じる
+      modals.forEach(m => m.classList.remove('is-active'));
+      modal.classList.add('is-active');
+      document.body.style.overflow = 'hidden';
+      // パネル内のスクロール位置をリセット
+      const content = modal.querySelector('.MemberModal_Content');
+      if (content) content.scrollTop = 0;
+    }
+  }
+
+  // サムネイルクリック → 一瞬拡大アニメーション → パネル開く
   thumbs.forEach(thumb => {
     thumb.addEventListener('click', () => {
       const memberId = thumb.getAttribute('data-member');
-      const modal = document.getElementById('memberModal-' + memberId);
-      if (modal) {
-        modal.classList.add('is-active');
-        document.body.style.overflow = 'hidden';
-      }
+
+      // 一瞬拡大アニメーション
+      thumb.classList.add('is-clicked');
+      setTimeout(() => {
+        thumb.classList.remove('is-clicked');
+        openMemberPanel(memberId);
+      }, 250);
     });
   });
 
-  // モーダルを閉じる処理
+  // パネルを閉じる処理
   function closeMemberModal(modal) {
     modal.classList.remove('is-active');
     document.body.style.overflow = '';
@@ -566,6 +585,31 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     }
+  });
+
+  // === 矢印ナビゲーション（前後のメンバーに移動） ===
+  document.querySelectorAll('.js-member-nav').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const modal = btn.closest('.js-member-modal');
+      if (!modal) return;
+
+      const currentId = modal.getAttribute('data-member-id');
+      const currentIndex = memberOrder.indexOf(currentId);
+      if (currentIndex === -1) return;
+
+      const dir = btn.getAttribute('data-dir');
+      let nextIndex;
+      if (dir === 'next') {
+        nextIndex = (currentIndex + 1) % memberOrder.length;
+      } else {
+        nextIndex = (currentIndex - 1 + memberOrder.length) % memberOrder.length;
+      }
+
+      const nextId = memberOrder[nextIndex];
+      // 現在のパネルを閉じて次を開く
+      modal.classList.remove('is-active');
+      openMemberPanel(nextId);
+    });
   });
 
 });
