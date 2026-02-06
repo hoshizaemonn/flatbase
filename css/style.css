@@ -1829,14 +1829,14 @@ body.modal-open {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 0%;/* 頭が画像の上端にくるように */
-  transform: scale(1.2);
-  transform-origin: center 0%;
+  object-position: center 0%;
+  transform: scale(2.0);/* 顔が画像の大部分を占めるようにズーム */
+  transform-origin: center 5%;/* 頭の上端が画像の上に来るように */
   filter: grayscale(100%);
   transition: transform 0.5s ease, filter 0.5s ease;
 }
 .Member_Thumb:hover .Member_Thumb_Image img {
-  transform: scale(1.25);
+  transform: scale(2.05);
   filter: grayscale(60%);
 }
 .Member_Thumb_Info {
@@ -1919,8 +1919,15 @@ body.modal-open {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 999999;
+  z-index: 99999999;/* ヘッダー(99999)より確実に上 */
   pointer-events: none;
+}
+/* モーダルオープン時、ヘッダーを隠す */
+body.modal-open .Header {
+  z-index: 0 !important;
+}
+body.modal-open .follower {
+  z-index: 0 !important;
 }
 .MemberModal.is-active {
   pointer-events: auto;
@@ -2006,7 +2013,9 @@ body.modal-open {
   width: 100%;
   aspect-ratio: 3/4;
   object-fit: cover;
-  object-position: center 0%;/* 頭が上端にくるように */
+  object-position: center 0%;
+  transform: scale(1.6);/* 顔中心にズーム（体が見えすぎないように） */
+  transform-origin: center 5%;/* 頭の上端が画像の上に */
   filter: grayscale(100%);
   display: block;
 }
@@ -2086,7 +2095,7 @@ body.modal-open {
 
 /* クリック時の一瞬拡大アニメーション */
 .Member_Thumb.is-clicked .Member_Thumb_Image img {
-  transform: scale(1.35);
+  transform: scale(2.2);
   transition: transform 0.2s ease;
 }
 
@@ -2165,6 +2174,8 @@ body.modal-open {
   .MemberModal_Image img {
     aspect-ratio: 1/1;
     object-position: center 0%;
+    transform: scale(1.8);
+    transform-origin: center 5%;
   }
   .MemberModal_Name_Ja {
     font-size: 22px;
