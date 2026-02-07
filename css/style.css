@@ -2144,32 +2144,49 @@ body.modal-open .follower {
   .Member_Section_Title {
     font-size: 18px;
   }
-  /* パネル（モバイル） */
+  /* パネル（モバイル：全画面表示） */
+  .MemberModal_Overlay {
+    display: none;/* モバイルではオーバーレイ不要 */
+  }
   .MemberModal_Content {
-    width: 92%;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0;
   }
   .MemberModal_Body {
-    padding: 50px 20px 20px;
+    padding: 0 0 100px;/* 下に矢印分の余白 */
   }
   .MemberModal_Close {
-    top: 12px;
-    right: 12px;
+    top: 14px;
+    right: 14px;
     width: 44px;
     height: 44px;
-    font-size: 20px;
+    font-size: 22px;
+    background: rgba(255,255,255,0.8);
+    border-color: #999;
+    color: #333;
+    z-index: 20;
   }
   .MemberModal_Inner {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 0;
   }
+  /* 写真：全幅で上部に表示 */
   .MemberModal_Image {
     position: relative;
-    max-width: 260px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 0;
   }
   .MemberModal_Image img {
-    aspect-ratio: 1/1;
-    object-position: center center;
+    aspect-ratio: auto;
+    width: 100%;
+    max-height: 55vh;
+    object-position: center top;
+    border-radius: 0;
+  }
+  /* プロフィール：写真の下に */
+  .MemberModal_Profile {
+    padding: 24px 20px 0;
   }
   .MemberModal_Name_Ja {
     font-size: 22px;
@@ -2177,16 +2194,23 @@ body.modal-open .follower {
   .MemberModal_Name_En {
     font-size: 14px;
   }
+  .MemberModal_Position {
+    margin-bottom: 20px;
+  }
   .MemberModal_Detail {
     font-size: 13px;
+    line-height: 1.8;
   }
+  /* ナビ矢印：右下固定 */
   .MemberModal_Nav {
-    bottom: 16px;
-    right: 16px;
+    bottom: 20px;
+    right: 20px;
   }
   .MemberModal_NavBtn {
     width: 44px;
     height: 44px;
+    background: rgba(255,255,255,0.8);
+    border-color: #999;
   }
 }
 /**********************************/
