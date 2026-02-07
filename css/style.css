@@ -1829,14 +1829,12 @@ body.modal-open {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 15%;/* 灰色背景をスキップして頭の位置に合わせる */
-  transform: scale(1.35);/* 頭〜胸上が見える程度のズーム */
-  transform-origin: center 15%;
+  object-position: center center;
   filter: grayscale(100%);
   transition: transform 0.5s ease, filter 0.5s ease;
 }
 .Member_Thumb:hover .Member_Thumb_Image img {
-  transform: scale(1.4);
+  transform: scale(1.05);
   filter: grayscale(60%);
 }
 .Member_Thumb_Info {
@@ -2013,10 +2011,8 @@ body.modal-open .follower {
   width: 100%;
   aspect-ratio: 3/4;
   object-fit: cover;
-  object-position: center 15%;/* 灰色背景をスキップして頭の位置に合わせる */
-  transform: scale(1.15);/* 頭〜上半身が見える程度の軽いズーム */
-  transform-origin: center 15%;
-  filter: grayscale(100%);
+  object-position: center top;/* 頭の上端から表示 */
+  /* グレースケールなし（カラー表示） */
   display: block;
 }
 .MemberModal_Profile {
@@ -2095,7 +2091,7 @@ body.modal-open .follower {
 
 /* クリック時の一瞬拡大アニメーション */
 .Member_Thumb.is-clicked .Member_Thumb_Image img {
-  transform: scale(1.5);
+  transform: scale(1.08);
   transition: transform 0.2s ease;
 }
 
@@ -2173,9 +2169,7 @@ body.modal-open .follower {
   }
   .MemberModal_Image img {
     aspect-ratio: 1/1;
-    object-position: center 15%;
-    transform: scale(1.3);
-    transform-origin: center 15%;
+    object-position: center center;
   }
   .MemberModal_Name_Ja {
     font-size: 22px;

@@ -542,6 +542,7 @@ document.addEventListener('DOMContentLoaded', () => {
       modals.forEach(m => m.classList.remove('is-active'));
       modal.classList.add('is-active');
       document.body.style.overflow = 'hidden';
+      document.body.classList.add('modal-open'); // ヘッダー非表示用
       // パネル内のスクロール位置をリセット
       const content = modal.querySelector('.MemberModal_Content');
       if (content) content.scrollTop = 0;
@@ -566,6 +567,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function closeMemberModal(modal) {
     modal.classList.remove('is-active');
     document.body.style.overflow = '';
+    document.body.classList.remove('modal-open'); // ヘッダー再表示
   }
 
   // 閉じるボタン & オーバーレイクリック
