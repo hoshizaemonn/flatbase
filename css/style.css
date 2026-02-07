@@ -2144,7 +2144,7 @@ body.modal-open .follower {
   .Member_Section_Title {
     font-size: 18px;
   }
-  /* パネル（モバイル：全画面表示） */
+  /* パネル（モバイル：全画面・右サイドにボタン列） */
   .MemberModal_Overlay {
     display: none;/* モバイルではオーバーレイ不要 */
   }
@@ -2152,26 +2152,40 @@ body.modal-open .follower {
     width: 100%;
     max-width: 100%;
     border-radius: 0;
+    /* 2カラムGrid：左=コンテンツ / 右=ボタン列 */
+    display: grid;
+    grid-template-columns: 1fr 56px;
+    grid-template-rows: auto 1fr auto;
   }
-  .MemberModal_Body {
-    padding: 0 0 100px;/* 下に矢印分の余白 */
-  }
+  /* ×ボタン → 右上 */
   .MemberModal_Close {
-    top: 14px;
-    right: 14px;
-    width: 44px;
-    height: 44px;
-    font-size: 22px;
-    background: rgba(255,255,255,0.8);
-    border-color: #999;
+    grid-column: 2;
+    grid-row: 1;
+    position: static;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    background: transparent;
+    border: 1.5px solid #ccc;
+    border-radius: 50%;
     color: #333;
     z-index: 20;
+    justify-self: center;
+    align-self: start;
+    margin-top: 16px;
+  }
+  /* コンテンツ本体 → 左側全行 */
+  .MemberModal_Body {
+    grid-column: 1;
+    grid-row: 1 / -1;
+    padding: 0 0 30px;
+    overflow-y: auto;
   }
   .MemberModal_Inner {
     grid-template-columns: 1fr;
     gap: 0;
   }
-  /* 写真：全幅で上部に表示 */
+  /* 写真：左側コンテンツ全幅 */
   .MemberModal_Image {
     position: relative;
     max-width: 100%;
@@ -2201,16 +2215,22 @@ body.modal-open .follower {
     font-size: 13px;
     line-height: 1.8;
   }
-  /* ナビ矢印：右下固定 */
+  /* ナビ矢印 → 右下 */
   .MemberModal_Nav {
-    bottom: 20px;
-    right: 20px;
+    grid-column: 2;
+    grid-row: 3;
+    position: static;
+    flex-direction: column;
+    gap: 8px;
+    justify-self: center;
+    align-self: end;
+    margin-bottom: 20px;
   }
   .MemberModal_NavBtn {
-    width: 44px;
-    height: 44px;
-    background: rgba(255,255,255,0.8);
-    border-color: #999;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border-color: #ccc;
   }
 }
 /**********************************/
