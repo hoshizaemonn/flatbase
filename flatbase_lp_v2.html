@@ -12,14 +12,14 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&family=Noto+Sans+JP:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
   --black:#111;--dark:#1a1a1a;--dark-mid:#222;--gray-dark:#555;--gray-mid:#999;
   --gray-light:#e8e6e3;--off-white:#f7f6f4;--white:#fff;
   --accent:#c8a86e;--accent-dark:#b8964e;--accent-light:#dcc9a0;--accent-bg:rgba(200,168,110,.04);
-  --font-display:'Cormorant Garamond',serif;
+  --font-display:'Montserrat',sans-serif;
   --font-en:'Montserrat',sans-serif;
   --font-jp:'Noto Sans JP',sans-serif;
   --section-py:140px;--container:1100px;--ls-en:4px;--ls-jp:.12em;
@@ -40,7 +40,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 .section-label--muted{color:var(--gray-mid)}
 .section-label--light{color:rgba(255,255,255,.35)}
 .section-label--light::after{background:rgba(200,168,110,.5)}
-.heading-display{font-family:var(--font-display);font-size:clamp(32px,4.5vw,56px);font-weight:400;letter-spacing:2px;line-height:1.2;color:var(--black)}
+.heading-display{font-family:var(--font-display);font-size:clamp(32px,4.5vw,56px);font-weight:700;letter-spacing:2px;line-height:1.2;color:var(--black)}
 .heading-display--light{color:var(--off-white)}
 .heading-en{font-family:var(--font-en);font-size:clamp(22px,3vw,36px);font-weight:700;letter-spacing:3px;line-height:1.3;text-transform:uppercase}
 .heading-jp{font-family:var(--font-jp);font-size:clamp(13px,1.4vw,15px);font-weight:300;letter-spacing:var(--ls-jp);margin-top:16px;margin-bottom:32px;color:var(--gray-mid)}
@@ -73,7 +73,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 .hero-inner{position:relative;z-index:2;width:100%;max-width:var(--container);margin:0 auto;padding:0 48px;padding-top:120px}
 .hero-eyecatch{font-family:var(--font-en);font-size:10px;font-weight:600;letter-spacing:6px;text-transform:uppercase;color:var(--accent);margin-bottom:32px;position:relative;padding-left:40px}
 .hero-eyecatch::before{content:'';position:absolute;left:0;top:50%;width:28px;height:1px;background:var(--accent)}
-.hero-title{font-family:var(--font-display);font-size:clamp(36px,6vw,72px);font-weight:400;color:var(--white);letter-spacing:2px;line-height:1.15;margin-bottom:24px}
+.hero-title{font-family:var(--font-display);font-size:clamp(36px,6vw,72px);font-weight:700;color:var(--white);letter-spacing:2px;line-height:1.15;margin-bottom:24px}
 .hero-title em{font-style:normal;color:var(--accent-light)}
 .hero-subtitle{font-family:var(--font-jp);font-size:clamp(14px,1.5vw,17px);font-weight:200;color:rgba(255,255,255,.5);letter-spacing:var(--ls-jp);line-height:2;margin-bottom:56px;max-width:540px}
 .hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:80px}
@@ -84,7 +84,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 .btn-secondary{font-family:var(--font-en);font-size:11px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.7);padding:16px 48px;border:1px solid rgba(255,255,255,.15);transition:all .4s cubic-bezier(.22,.61,.36,1);display:inline-block}
 .btn-secondary:hover{border-color:rgba(255,255,255,.5);color:var(--white);transform:translateY(-2px)}
 .hero-stats{display:flex;gap:64px;padding-top:48px;border-top:1px solid rgba(255,255,255,.06)}
-.hero-stat-num{font-family:var(--font-display);font-size:clamp(48px,6vw,72px);font-weight:300;color:var(--accent);line-height:1;display:inline-block}
+.hero-stat-num{font-family:var(--font-display);font-size:clamp(48px,6vw,72px);font-weight:600;color:var(--accent);line-height:1;display:inline-block}
 .hero-stat-num span{font-family:var(--font-en);font-size:.3em;font-weight:400;margin-left:4px;vertical-align:super;letter-spacing:1px}
 .hero-stat-label{font-family:var(--font-jp);font-size:11px;font-weight:300;color:rgba(255,255,255,.3);letter-spacing:.06em;margin-top:12px}
 .hero-stat-bar{width:32px;height:1px;background:rgba(200,168,110,.4);margin-top:10px}
@@ -126,7 +126,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 .worry-item::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .4s cubic-bezier(.22,.61,.36,1)}
 .worry-item:hover::before{transform:scaleX(1)}
 .worry-item:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.06)}
-.worry-num{font-family:var(--font-display);font-size:36px;font-weight:300;color:var(--accent);line-height:1;margin-bottom:16px}
+.worry-num{font-family:var(--font-display);font-size:36px;font-weight:600;color:var(--accent);line-height:1;margin-bottom:16px}
 .worry-text{font-family:var(--font-jp);font-size:14px;line-height:2;color:var(--gray-dark)}
 .worry-text strong{color:var(--black);font-weight:600}
 .worries-bridge{margin-top:72px;text-align:center;padding-top:40px;border-top:1px solid rgba(0,0,0,.06)}
@@ -205,10 +205,10 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 .why-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(0,0,0,.08)}
 .why-card-img{width:100%;height:180px;object-fit:cover}
 .why-card-body{padding:36px 32px}
-.why-card-num{font-family:var(--font-display);font-size:56px;font-weight:300;color:rgba(200,168,110,.12);line-height:1;margin-bottom:16px}
+.why-card-num{font-family:var(--font-display);font-size:56px;font-weight:500;color:rgba(200,168,110,.12);line-height:1;margin-bottom:16px}
 .why-card-title{font-family:var(--font-jp);font-size:16px;font-weight:600;line-height:1.6;margin-bottom:20px;letter-spacing:.04em}
 .why-card-stat{display:flex;align-items:baseline;gap:6px;margin-bottom:8px}
-.why-card-stat-num{font-family:var(--font-display);font-size:clamp(48px,5vw,60px);font-weight:300;color:var(--accent);line-height:1}
+.why-card-stat-num{font-family:var(--font-display);font-size:clamp(48px,5vw,60px);font-weight:600;color:var(--accent);line-height:1}
 .why-card-stat-unit{font-family:var(--font-jp);font-size:12px;color:var(--gray-mid)}
 .why-card-stat-bar{width:40px;height:1px;background:var(--accent);margin-bottom:20px}
 .why-card-desc{font-family:var(--font-jp);font-size:13px;line-height:2.1;color:var(--gray-dark)}
@@ -225,7 +225,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 .three-e-icon{width:40px;height:40px;margin-bottom:20px;color:var(--accent);opacity:.5}
 .three-e-icon svg{width:100%;height:100%}
 .three-e-num{font-family:var(--font-en);font-size:10px;font-weight:600;letter-spacing:3px;color:rgba(200,168,110,.4);margin-bottom:12px}
-.three-e-title{font-family:var(--font-display);font-size:28px;font-weight:400;letter-spacing:2px;margin-bottom:8px;color:var(--accent-light)}
+.three-e-title{font-family:var(--font-display);font-size:28px;font-weight:600;letter-spacing:2px;margin-bottom:8px;color:var(--accent-light)}
 .three-e-subtitle{font-family:var(--font-jp);font-size:13px;font-weight:300;margin-bottom:20px;color:rgba(255,255,255,.4)}
 .three-e-desc{font-family:var(--font-jp);font-size:13px;line-height:2.1;color:rgba(255,255,255,.35)}
 
@@ -245,7 +245,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 .scene-strip img{width:100%;height:100%;object-fit:cover}
 .scene-strip-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(17,17,17,.85) 0%,rgba(17,17,17,.4) 50%,rgba(17,17,17,.85) 100%);display:flex;align-items:center;justify-content:center}
 .scene-strip-text{text-align:center}
-.scene-strip-text h3{font-family:var(--font-display);font-size:clamp(28px,4vw,48px);font-weight:400;color:var(--off-white);letter-spacing:3px;margin-bottom:8px}
+.scene-strip-text h3{font-family:var(--font-display);font-size:clamp(28px,4vw,48px);font-weight:700;color:var(--off-white);letter-spacing:3px;margin-bottom:8px}
 .scene-strip-text p{font-family:var(--font-jp);font-size:14px;color:rgba(255,255,255,.4);letter-spacing:.08em}
 
 /* ===== FLOW ===== */
@@ -360,7 +360,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 .three-e-flow-node{text-align:center;padding:24px 20px;min-width:140px;border:1px solid rgba(200,168,110,.15);background:rgba(200,168,110,.03);transition:all .4s}
 .three-e-flow-node:hover{background:rgba(200,168,110,.08);transform:translateY(-4px)}
 .three-e-flow-node-num{font-family:var(--font-en);font-size:9px;font-weight:600;letter-spacing:3px;color:var(--accent);margin-bottom:8px}
-.three-e-flow-node-title{font-family:var(--font-display);font-size:22px;color:var(--accent-light);letter-spacing:1px;margin-bottom:6px}
+.three-e-flow-node-title{font-family:var(--font-display);font-size:22px;font-weight:600;color:var(--accent-light);letter-spacing:1px;margin-bottom:6px}
 .three-e-flow-node-desc{font-family:var(--font-jp);font-size:11px;color:rgba(255,255,255,.35);line-height:1.6}
 .three-e-flow-arrow{color:var(--accent);opacity:.3}
 .three-e-flow-arrow svg{width:24px;height:24px}
@@ -476,7 +476,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 <!-- ===== HERO ===== -->
 <section class="hero" id="hero">
   <div class="hero-bg">
-    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1920&h=1080&fit=crop&q=80" alt="PRイベント会場 — カンファレンス観客席とステージ照明" loading="eager" onerror="this.src='img/free/press-conference.jpg'">
+    <img src="https://chatgpt.com/backend-api/estuary/public_content/enc/eyJpZCI6Im1fNjk4OTVhZDUwZDdjODE5MTk3NzQ0Nzk5YjhlYWY0OWM6ZmlsZV8wMDAwMDAwMDVkNWM3MWZkOTFhNTdiNmU3MmI2OWNhOSIsInRzIjoiMjA0OTMiLCJwIjoicHlpIiwiY2lkIjoiMSIsInNpZyI6ImEyODhlMDhlZDAwNzA4MjllMjdlM2YyZmY3MGFhZmJmNTFhMWZhNTVmZjdjYTY1NmFkYWQxMjRiZjMxY2FmYjciLCJ2IjoiMCIsImdpem1vX2lkIjpudWxsLCJjcyI6bnVsbCwiY3AiOm51bGwsIm1hIjpudWxsfQ==" alt="日本人女性MCがステージ上でプレゼンテーション — PRイベント会場" loading="eager" onerror="this.src='img/free/press-conference.jpg'">
   </div>
   <div class="hero-accent-line"></div>
   <div class="hero-inner">
