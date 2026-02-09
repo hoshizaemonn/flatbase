@@ -1821,21 +1821,21 @@ body.modal-open {
 }
 .Member_Thumb_Image {
   position: relative;
-  overflow: hidden;
+  overflow: visible;/* 枠を消すためにvisibleに変更 */
   aspect-ratio: 1/1;
-  background: #c0c0c0;
+  background: transparent;/* 背景を透明に */
 }
 .Member_Thumb_Image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 30%;/* 胸・肩まで見える引きの構図 */
-  transform: scale(0.75);/* 写真を縮小して引きの構図に */
+  object-position: center 35%;/* さらに引きの構図 */
+  transform: scale(0.6);/* さらに縮小して胸まで見える引きの構図 */
   filter: grayscale(100%);
   transition: transform 0.5s ease, filter 0.5s ease;
 }
 .Member_Thumb:hover .Member_Thumb_Image img {
-  transform: scale(0.79);/* 0.75 * 1.05 = ホバー時の拡大 */
+  transform: scale(0.63);/* 0.6 * 1.05 = ホバー時の拡大 */
   filter: grayscale(60%);
 }
 .Member_Thumb_Info {
@@ -2006,14 +2006,14 @@ body.modal-open .follower {
 .MemberModal_Image {
   position: sticky;
   top: 0;
-  overflow: hidden;
+  overflow: visible;/* 枠を消すためにvisibleに変更 */
 }
 .MemberModal_Image img {
   width: 100%;
   aspect-ratio: 3/4;
   object-fit: cover;
-  object-position: center 30%;/* 胸・肩まで見える引きの構図 */
-  transform: scale(0.75);/* 写真を縮小して引きの構図に */
+  object-position: center 35%;/* さらに引きの構図 */
+  transform: scale(0.6);/* さらに縮小して胸まで見える引きの構図 */
   /* グレースケールなし（カラー表示） */
   display: block;
 }
@@ -2093,7 +2093,7 @@ body.modal-open .follower {
 
 /* クリック時の一瞬拡大アニメーション */
 .Member_Thumb.is-clicked .Member_Thumb_Image img {
-  transform: scale(0.81);/* 0.75 * 1.08 = クリック時の拡大 */
+  transform: scale(0.65);/* 0.6 * 1.08 = クリック時の拡大 */
   transition: transform 0.2s ease;
 }
 
@@ -2197,8 +2197,8 @@ body.modal-open .follower {
     aspect-ratio: auto;
     width: 100%;
     max-height: 55vh;
-    object-position: center 30%;/* 胸・肩まで見える引きの構図 */
-    transform: scale(0.75);/* 写真を縮小して引きの構図に */
+    object-position: center 35%;/* さらに引きの構図 */
+    transform: scale(0.6);/* さらに縮小して胸まで見える引きの構図 */
     border-radius: 0;
   }
   /* プロフィール：写真の下に */
