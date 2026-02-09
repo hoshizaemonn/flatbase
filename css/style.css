@@ -1829,7 +1829,7 @@ body.modal-open {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center center;
+  object-position: center 20%;/* 胸・肩まで見える引きの構図 */
   filter: grayscale(100%);
   transition: transform 0.5s ease, filter 0.5s ease;
 }
@@ -2011,7 +2011,7 @@ body.modal-open .follower {
   width: 100%;
   aspect-ratio: 3/4;
   object-fit: cover;
-  object-position: center top;/* 頭の上端から表示 */
+  object-position: center 15%;/* 胸・肩まで見える引きの構図 */
   /* グレースケールなし（カラー表示） */
   display: block;
 }
@@ -2195,7 +2195,7 @@ body.modal-open .follower {
     aspect-ratio: auto;
     width: 100%;
     max-height: 55vh;
-    object-position: center top;
+    object-position: center 15%;/* 胸・肩まで見える引きの構図 */
     border-radius: 0;
   }
   /* プロフィール：写真の下に */
