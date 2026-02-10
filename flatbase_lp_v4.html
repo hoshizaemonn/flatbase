@@ -275,9 +275,9 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 .section-team{padding:var(--section-py) 0;background:var(--gray-light)}
 .team-intro{font-family:var(--font-jp);font-size:15px;line-height:2.4;color:var(--gray-dark);max-width:700px;margin-bottom:80px}
 .team-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px}
-.team-card{display:grid;grid-template-columns:100px 1fr;gap:28px;align-items:start;background:var(--white);padding:36px;transition:all .4s cubic-bezier(.22,.61,.36,1)}
+.team-card{display:grid;grid-template-columns:150px 1fr;gap:28px;align-items:start;background:var(--white);padding:36px;transition:all .4s cubic-bezier(.22,.61,.36,1)}
 .team-card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,.06)}
-.team-avatar{width:100px;height:100px;border-radius:50%;overflow:hidden;flex-shrink:0}
+.team-avatar{width:150px;height:150px;border-radius:50%;overflow:hidden;flex-shrink:0}
 .team-avatar img{width:100%;height:100%;object-fit:cover;object-position:center 20%}
 .team-name{font-family:var(--font-jp);font-size:15px;font-weight:600;margin-bottom:2px;letter-spacing:.04em}
 .team-name-en{font-family:var(--font-en);font-size:10px;font-weight:500;letter-spacing:2px;color:var(--gray-mid);text-transform:uppercase;margin-bottom:6px}
@@ -481,9 +481,9 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
   <div class="hero-accent-line"></div>
   <div class="hero-inner">
     <p class="hero-eyecatch">FLAT BASE inc.</p>
-    <h1 class="hero-title">Full Process,<br><em>One Team.</em></h1>
+    <h1 class="hero-title">Full Support,<br><em>Planning & Execution.</em></h1>
     <p style="font-family:var(--font-jp);font-size:clamp(15px,1.6vw,18px);font-weight:400;color:var(--white);letter-spacing:.08em;line-height:2;margin-bottom:40px;max-width:600px">
-      PR戦略の設計から演出・造作・当日の運営進行まで、<br>01〜08すべての工程をワンチームで一貫対応。<br>手戻りゼロ、窓口一つ。
+      PRイベントを成功させるための秘訣を持つ、<br>業界唯一の制作会社。<br>企画から実行まで、すべての工程を網羅。
     </p>
     <div class="hero-ctas">
       <a href="#contact" class="btn-primary">Contact Us</a>
@@ -496,13 +496,13 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
         <div class="hero-stat-bar"></div>
       </div>
       <div class="hero-stat">
-        <div class="hero-stat-num" data-count="8">0<span>steps</span></div>
-        <div class="hero-stat-label">全行程ワンストップ対応</div>
+        <div class="hero-stat-num" data-count="12">0<span>yr</span></div>
+        <div class="hero-stat-label">業界最大手PR会社<br>イベント事業部での経験</div>
         <div class="hero-stat-bar"></div>
       </div>
       <div class="hero-stat">
-        <div class="hero-stat-num" data-count="12">0<span>yrs</span></div>
-        <div class="hero-stat-label">業界最大手での実務経験</div>
+        <div class="hero-stat-num" style="font-size:clamp(24px,3.5vw,40px)"><span style="font-size:inherit;color:var(--accent)">Cost<br>Down</span></div>
+        <div class="hero-stat-label">高いコストパフォーマンス</div>
         <div class="hero-stat-bar"></div>
       </div>
     </div>
@@ -539,201 +539,14 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
         </div>
       </div>
     </div>
-    <!-- PRイベント構造図解 — 従来 vs FLAT BASE 大型対比 -->
-    <div class="fade-in" style="margin-top:80px;margin-left:calc(-1 * (100vw - var(--container)) / 2 - 48px);margin-right:calc(-1 * (100vw - var(--container)) / 2 - 48px);padding:0 clamp(24px,4vw,64px)">
-      <div style="text-align:center;margin-bottom:48px">
-        <div class="section-label section-label--muted">Comparison</div>
-        <h2 style="font-family:var(--font-en);font-size:clamp(24px,3.5vw,40px);font-weight:700;letter-spacing:2px;color:var(--black)">Why One Team<br>Makes the Difference</h2>
-        <p class="heading-jp">なぜワンチーム体制が成果を生むのか</p>
-      </div>
-      <div style="display:grid;grid-template-columns:1fr 60px 1fr;gap:0;align-items:stretch;max-width:1400px;margin:0 auto">
-        <!-- 従来 -->
-        <div style="background:var(--gray-light);border-radius:20px;padding:48px 36px;text-align:center">
-          <div style="font-family:var(--font-en);font-size:13px;letter-spacing:3px;color:var(--gray-mid);text-transform:uppercase;margin-bottom:12px">Traditional</div>
-          <div style="font-family:var(--font-jp);font-size:clamp(20px,2.5vw,26px);font-weight:700;color:var(--gray-dark);margin-bottom:32px">従来の分業体制</div>
-          <div style="display:flex;flex-direction:column;gap:16px">
-            <div style="background:#fff;border:1px solid #ddd;border-radius:14px;padding:24px 20px">
-              <div style="font-family:var(--font-en);font-size:11px;letter-spacing:2px;color:var(--gray-mid);margin-bottom:8px">01–05 STRATEGY</div>
-              <div style="font-family:var(--font-jp);font-size:18px;font-weight:700;color:var(--gray-dark)">PR会社・広告代理店</div>
-              <div style="font-family:var(--font-jp);font-size:13px;color:var(--gray-mid);margin-top:8px;line-height:1.8">目的設計 / 会場選定 / 予算管理<br>キャスティング / メディア選定</div>
-            </div>
-            <div style="text-align:center;padding:8px 0">
-              <div style="font-family:var(--font-jp);font-size:14px;color:#c44;font-weight:600">
-                <span style="display:inline-block;width:32px;height:32px;background:#f5e6e6;border-radius:50%;line-height:32px;margin-bottom:4px">▼</span><br>
-                意図が正確に伝わらない
-              </div>
-            </div>
-            <div style="background:#fff;border:1px solid #ddd;border-radius:14px;padding:24px 20px">
-              <div style="font-family:var(--font-en);font-size:11px;letter-spacing:2px;color:var(--gray-mid);margin-bottom:8px">06–08 PRODUCTION</div>
-              <div style="font-family:var(--font-jp);font-size:18px;font-weight:700;color:var(--gray-dark)">制作会社（別会社）</div>
-              <div style="font-family:var(--font-jp);font-size:13px;color:var(--gray-mid);margin-top:8px;line-height:1.8">演出・造作 / 進行台本 / 当日運営</div>
-            </div>
-          </div>
-          <div style="margin-top:28px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-            <span style="background:#f5e6e6;color:#c44;font-size:14px;font-weight:600;padding:8px 18px;border-radius:24px">情報の分断</span>
-            <span style="background:#f5e6e6;color:#c44;font-size:14px;font-weight:600;padding:8px 18px;border-radius:24px">手戻りが多い</span>
-            <span style="background:#f5e6e6;color:#c44;font-size:14px;font-weight:600;padding:8px 18px;border-radius:24px">コスト増</span>
-          </div>
-        </div>
-        <!-- VS -->
-        <div style="display:flex;align-items:center;justify-content:center">
-          <div style="background:var(--accent);color:#fff;font-family:var(--font-en);font-size:14px;font-weight:800;letter-spacing:1px;width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(200,168,110,.4)">VS</div>
-        </div>
-        <!-- FLAT BASE -->
-        <div style="background:var(--dark);border-radius:20px;padding:48px 36px;text-align:center;position:relative;overflow:hidden">
-          <div style="position:absolute;top:16px;right:20px;background:var(--accent);color:var(--dark);font-family:var(--font-en);font-size:11px;font-weight:700;letter-spacing:2px;padding:6px 16px;border-radius:24px">ALL-IN-ONE</div>
-          <div style="font-family:var(--font-en);font-size:13px;letter-spacing:3px;color:var(--accent);text-transform:uppercase;margin-bottom:12px">FLAT BASE</div>
-          <div style="font-family:var(--font-jp);font-size:clamp(20px,2.5vw,26px);font-weight:700;color:var(--off-white);margin-bottom:32px">全工程をワンチームで対応</div>
-          <div style="border:2px solid var(--accent);border-radius:16px;padding:28px 20px;position:relative">
-            <div style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--dark);padding:0 16px;font-family:var(--font-en);font-size:11px;letter-spacing:2px;color:var(--accent);font-weight:600">01–08 ALL STEPS</div>
-            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:8px">
-              <div style="background:rgba(200,168,110,.12);border-radius:10px;padding:14px 6px"><div style="font-family:var(--font-en);font-size:12px;color:var(--accent);font-weight:700">01</div><div style="font-family:var(--font-jp);font-size:12px;color:var(--off-white);margin-top:4px">目的設計</div></div>
-              <div style="background:rgba(200,168,110,.12);border-radius:10px;padding:14px 6px"><div style="font-family:var(--font-en);font-size:12px;color:var(--accent);font-weight:700">02</div><div style="font-family:var(--font-jp);font-size:12px;color:var(--off-white);margin-top:4px">会場選定</div></div>
-              <div style="background:rgba(200,168,110,.12);border-radius:10px;padding:14px 6px"><div style="font-family:var(--font-en);font-size:12px;color:var(--accent);font-weight:700">03</div><div style="font-family:var(--font-jp);font-size:12px;color:var(--off-white);margin-top:4px">予算管理</div></div>
-              <div style="background:rgba(200,168,110,.12);border-radius:10px;padding:14px 6px"><div style="font-family:var(--font-en);font-size:12px;color:var(--accent);font-weight:700">04</div><div style="font-family:var(--font-jp);font-size:12px;color:var(--off-white);margin-top:4px">出演者</div></div>
-              <div style="background:rgba(200,168,110,.12);border-radius:10px;padding:14px 6px"><div style="font-family:var(--font-en);font-size:12px;color:var(--accent);font-weight:700">05</div><div style="font-family:var(--font-jp);font-size:12px;color:var(--off-white);margin-top:4px">メディア</div></div>
-              <div style="background:rgba(200,168,110,.12);border-radius:10px;padding:14px 6px"><div style="font-family:var(--font-en);font-size:12px;color:var(--accent);font-weight:700">06</div><div style="font-family:var(--font-jp);font-size:12px;color:var(--off-white);margin-top:4px">演出制作</div></div>
-              <div style="background:rgba(200,168,110,.12);border-radius:10px;padding:14px 6px"><div style="font-family:var(--font-en);font-size:12px;color:var(--accent);font-weight:700">07</div><div style="font-family:var(--font-jp);font-size:12px;color:var(--off-white);margin-top:4px">台本</div></div>
-              <div style="background:rgba(200,168,110,.12);border-radius:10px;padding:14px 6px"><div style="font-family:var(--font-en);font-size:12px;color:var(--accent);font-weight:700">08</div><div style="font-family:var(--font-jp);font-size:12px;color:var(--off-white);margin-top:4px">当日運営</div></div>
-            </div>
-          </div>
-          <p style="font-family:var(--font-jp);font-size:14px;color:rgba(255,255,255,.6);margin-top:20px;line-height:1.8">PR視点を理解したプロが制作・運営を担当するため<br>戦略意図がそのまま現場に反映されます</p>
-          <div style="margin-top:24px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-            <span style="background:rgba(200,168,110,.2);color:var(--accent);font-size:14px;font-weight:600;padding:8px 18px;border-radius:24px">窓口統一</span>
-            <span style="background:rgba(200,168,110,.2);color:var(--accent);font-size:14px;font-weight:600;padding:8px 18px;border-radius:24px">手戻りゼロ</span>
-            <span style="background:rgba(200,168,110,.2);color:var(--accent);font-size:14px;font-weight:600;padding:8px 18px;border-radius:24px">最適コスト</span>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
-<!-- ===== PHOTO GALLERY ===== -->
-<div class="photo-gallery">
-  <div class="photo-gallery-grid">
-    <img src="https://images.unsplash.com/photo-1675977586492-fec42f8d00af?w=800&h=600&fit=crop&q=80" alt="イベント撮影・放送カメラ" loading="lazy">
-    <img src="img/web/260128_0017.jpg" alt="FLAT BASEオフィス" loading="lazy">
-    <img src="https://images.unsplash.com/photo-1507961460271-ab6304a025c7?w=800&h=600&fit=crop&q=80" alt="ステージマイク・演出照明" loading="lazy">
-    <img src="img/web/260128_0023.jpg" alt="スタッフミーティング" loading="lazy">
-  </div>
-</div>
-
-<!-- ===== INLINE CTA ===== -->
-<div class="inline-cta">
-  <p class="inline-cta-text">PRイベントの企画・制作について、まずはお気軽にご相談ください</p>
-  <a href="#contact" class="btn-gold-sm">Free Consultation</a>
-</div>
-
-<!-- ===== WORRIES ===== -->
-<section class="section-worries" id="worries" style="position:relative;overflow:hidden">
-  <div class="geo-pattern geo-pattern--grid" style="bottom:0;right:-50px;width:250px;height:250px"></div>
-  <div class="container">
-    <div class="section-label section-label--muted">Common Challenges</div>
-    <h2 class="worries-lead fade-in">PRイベントの制作で、<br>こんなお悩みはありませんか？</h2>
-    <div class="worries-grid fade-in">
-      <div class="worry-item">
-        <div class="worry-num">01</div>
-        <p class="worry-text">イベント制作会社に依頼しているが、<strong>PR視点の設計が弱く</strong>、メディア露出につながらない</p>
-      </div>
-      <div class="worry-item">
-        <div class="worry-num">02</div>
-        <p class="worry-text">代理店やPR会社の意図を、制作会社が正しく理解してくれず、<strong>手戻りが多い</strong></p>
-      </div>
-      <div class="worry-item">
-        <div class="worry-num">03</div>
-        <p class="worry-text">造作やテクニカル<strong>費用が膨らみがち</strong>で、予算管理が難しい</p>
-      </div>
-      <div class="worry-item">
-        <div class="worry-num">04</div>
-        <p class="worry-text">記者会見・発表会の演出・進行を<strong>安心して任せられるパートナー</strong>がいない</p>
-      </div>
-      <div class="worry-item">
-        <div class="worry-num">05</div>
-        <p class="worry-text">上流（戦略）と下流（制作）が<strong>分断されており</strong>、意図が正しく伝わらない</p>
-      </div>
-      <div class="worry-item">
-        <div class="worry-num">06</div>
-        <p class="worry-text">複数のベンダーを管理するのが大変で、<strong>すべてワンストップで任せたい</strong></p>
-      </div>
-    </div>
-    <div class="worries-bridge fade-in">
-      <p class="worries-bridge-text"><em>FLAT BASE</em> がすべてワンストップで解決します</p>
-      <div class="worries-bridge-arrow"></div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== COMPARISON DIAGRAM (参考: KMC/ray-comide風) ===== -->
-<section class="section-comparison">
-  <div class="container">
-    <div style="text-align:center;margin-bottom:16px">
-      <div class="section-label section-label--gold" style="display:inline-block">Before / After</div>
-    </div>
-    <h2 class="heading-display" style="text-align:center;font-size:clamp(22px,3vw,36px)">FLAT BASEに依頼すると、<br>何が変わるのか？</h2>
-    <div class="comparison-grid fade-in">
-      <div class="comparison-box comparison-box--before">
-        <div class="comparison-box-label">Before</div>
-        <div class="comparison-box-title">従来のPRイベント制作体制</div>
-        <ul class="comparison-list">
-          <li>PR会社と制作会社が別で、意図が正しく伝わらない</li>
-          <li>上流の戦略と下流の制作が分断し、手戻りが発生</li>
-          <li>複数ベンダーの管理に工数がかかる</li>
-          <li>費用が膨らみやすく、予算コントロールが困難</li>
-          <li>PR視点が弱く、メディア露出に繋がりにくい</li>
-        </ul>
-        <div class="comparison-icon-row">
-          <div class="comparison-icon-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
-            分断
-          </div>
-          <div class="comparison-icon-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 8v4l3 3"/><circle cx="12" cy="12" r="10"/></svg>
-            手戻り
-          </div>
-          <div class="comparison-icon-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
-            高コスト
-          </div>
-        </div>
-      </div>
-      <div class="comparison-arrow">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </div>
-      <div class="comparison-box comparison-box--after">
-        <div class="comparison-box-label">After</div>
-        <div class="comparison-box-title">FLAT BASEの全行程対応体制</div>
-        <ul class="comparison-list">
-          <li>PR戦略から制作・運営まで、ワンストップで対応</li>
-          <li>上流を理解した制作チームで、手戻りゼロ</li>
-          <li>窓口一つで、コミュニケーションコスト削減</li>
-          <li>PRイベント特化のネットワークで最適コスト</li>
-          <li>PR視点で設計し、メディア露出を最大化</li>
-        </ul>
-        <div class="comparison-icon-row">
-          <div class="comparison-icon-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            全行程対応
-          </div>
-          <div class="comparison-icon-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            窓口統一
-          </div>
-          <div class="comparison-icon-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
-            最適コスト
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== PROCESS — One-Stop Flow ===== -->
+<!-- ===== PROCESS — Full Support : Planning to Execution ===== -->
 <section class="section-process" id="process">
   <div class="geo-pattern geo-pattern--dots" style="top:0;right:0;width:300px;height:300px"></div>
   <div class="container">
-    <div class="section-label section-label--gold">One-Stop Service</div>
+    <div class="section-label section-label--gold">Full Support</div>
     <h2 class="heading-en" style="color:var(--off-white)">Full Support :<br>Planning to Execution</h2>
     <p class="heading-jp heading-jp--light">企画から運営まで、01〜08 すべてをワンストップで対応</p>
     <p class="process-intro">
@@ -815,6 +628,61 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
         <strong>FLAT BASEは、PR戦略から制作・運営まで、すべての工程を理解した「PRイベントのプロ集団」です。</strong><br>
         各領域のスペシャリストが直接サポートし、イベント全体の成功をリードします。
       </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PHOTO GALLERY ===== -->
+<div class="photo-gallery">
+  <div class="photo-gallery-grid">
+    <img src="https://images.unsplash.com/photo-1675977586492-fec42f8d00af?w=800&h=600&fit=crop&q=80" alt="イベント撮影・放送カメラ" loading="lazy">
+    <img src="img/web/260128_0017.jpg" alt="FLAT BASEオフィス" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1507961460271-ab6304a025c7?w=800&h=600&fit=crop&q=80" alt="ステージマイク・演出照明" loading="lazy">
+    <img src="img/web/260128_0023.jpg" alt="スタッフミーティング" loading="lazy">
+  </div>
+</div>
+
+<!-- ===== INLINE CTA ===== -->
+<div class="inline-cta">
+  <p class="inline-cta-text">PRイベントの企画・制作について、まずはお気軽にご相談ください</p>
+  <a href="#contact" class="btn-gold-sm">Free Consultation</a>
+</div>
+
+<!-- ===== WORRIES ===== -->
+<section class="section-worries" id="worries" style="position:relative;overflow:hidden">
+  <div class="geo-pattern geo-pattern--grid" style="bottom:0;right:-50px;width:250px;height:250px"></div>
+  <div class="container">
+    <div class="section-label section-label--muted">Common Challenges</div>
+    <h2 class="worries-lead fade-in">PRイベントの制作で、<br>こんなお悩みはありませんか？</h2>
+    <div class="worries-grid fade-in">
+      <div class="worry-item">
+        <div class="worry-num">01</div>
+        <p class="worry-text">イベント制作会社に依頼しているが、<strong>PR視点の設計が弱く</strong>、メディア露出につながらない</p>
+      </div>
+      <div class="worry-item">
+        <div class="worry-num">02</div>
+        <p class="worry-text">代理店やPR会社の意図を、制作会社が正しく理解してくれず、<strong>手戻りが多い</strong></p>
+      </div>
+      <div class="worry-item">
+        <div class="worry-num">03</div>
+        <p class="worry-text">造作やテクニカル<strong>費用が膨らみがち</strong>で、予算管理が難しい</p>
+      </div>
+      <div class="worry-item">
+        <div class="worry-num">04</div>
+        <p class="worry-text">記者会見・発表会の演出・進行を<strong>安心して任せられるパートナー</strong>がいない</p>
+      </div>
+      <div class="worry-item">
+        <div class="worry-num">05</div>
+        <p class="worry-text">上流（戦略）と下流（制作）が<strong>分断されており</strong>、意図が正しく伝わらない</p>
+      </div>
+      <div class="worry-item">
+        <div class="worry-num">06</div>
+        <p class="worry-text">複数のベンダーを管理するのが大変で、<strong>すべてワンストップで任せたい</strong></p>
+      </div>
+    </div>
+    <div class="worries-bridge fade-in">
+      <p class="worries-bridge-text"><em>FLAT BASE</em> がすべてワンストップで解決します</p>
+      <div class="worries-bridge-arrow"></div>
     </div>
   </div>
 </section>
