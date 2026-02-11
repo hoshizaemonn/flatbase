@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PRイベント全行程対応 | 企画から運営まで | FLAT BASE inc.</title>
+<meta name="description" content="PR戦略から制作・運営まで、01〜08すべての工程を熟知したプロ集団が対応。PRイベント制作に特化した専門チーム。年間平均60件の実績。FLAT BASE inc.">
+<meta property="og:title" content="PRイベント全行程対応 | FLAT BASE inc.">
+<meta property="og:description" content="PR戦略から制作・運営まで、01〜08すべての工程を熟知したプロ集団が対応。PRイベント制作に特化した専門チーム。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://flat-base.jp/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --black:#111;--dark:#1a1a1a;--dark-mid:#222;--gray-dark:#555;--gray-mid:#999;
+  --gray-light:#e8e6e3;--off-white:#f7f6f4;--white:#fff;
+  --accent:#c8a86e;--accent-dark:#b8964e;--accent-light:#dcc9a0;--accent-bg:rgba(200,168,110,.04);
+  --font-display:'Montserrat',sans-serif;
+  --font-en:'Montserrat',sans-serif;
+  --font-jp:'Noto Sans JP',sans-serif;
+  --section-py:140px;--container:1100px;--ls-en:4px;--ls-jp:.12em;
+}
+html{scroll-behavior:smooth;font-size:16px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.fade-in{transition:none!important}}
+body{font-family:var(--font-jp),sans-serif;color:var(--black);background:var(--off-white);line-height:1.8;-webkit-font-smoothing:antialiased;letter-spacing:.04em}
+.container{max-width:var(--container);margin:0 auto;padding:0 48px}
+.container--wide{max-width:1280px;margin:0 auto;padding:0 48px}
+img{max-width:100%;display:block}
+a{text-decoration:none}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* ===== UTILITY ===== */
+.section-label{font-family:var(--font-en);font-size:11px;font-weight:600;letter-spacing:var(--ls-en);text-transform:uppercase;margin-bottom:24px;display:inline-block;position:relative;padding-bottom:12px}
+.section-label::after{content:'';position:absolute;bottom:0;left:0;width:24px;height:1px;background:var(--accent)}
+.section-label--gold{color:var(--accent)}
+.section-label--muted{color:var(--gray-mid)}
+.section-label--light{color:rgba(255,255,255,.35)}
+.section-label--light::after{background:rgba(200,168,110,.5)}
+.heading-display{font-family:var(--font-display);font-size:clamp(32px,4.5vw,56px);font-weight:700;letter-spacing:2px;line-height:1.2;color:var(--black)}
+.heading-display--light{color:var(--off-white)}
+.heading-en{font-family:var(--font-en);font-size:clamp(22px,3vw,36px);font-weight:700;letter-spacing:3px;line-height:1.3;text-transform:uppercase}
+.heading-jp{font-family:var(--font-jp);font-size:clamp(13px,1.4vw,15px);font-weight:300;letter-spacing:var(--ls-jp);margin-top:16px;margin-bottom:32px;color:var(--gray-mid)}
+.heading-jp--light{color:rgba(255,255,255,.35)}
+.text-body{font-family:var(--font-jp);font-size:15px;line-height:2.2;letter-spacing:var(--ls-jp);color:var(--gray-dark)}
+.accent-text{color:var(--accent);font-weight:500}
+.accent-text--light{color:var(--accent-light);font-weight:500}
+.accent-text--light{color:var(--accent-light);font-weight:500}
+
+.fade-in{opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.22,.61,.36,1),transform .8s cubic-bezier(.22,.61,.36,1)}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+
+/* ===== HEADER ===== */
+.header{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:20px 48px;display:flex;justify-content:space-between;align-items:center;transition:all .5s cubic-bezier(.22,.61,.36,1)}
+.header.scrolled{background:rgba(17,17,17,.95);backdrop-filter:blur(16px);padding:14px 48px}
+.header-logo{display:flex;align-items:center}
+.header-logo-img{height:16px;width:auto}
+.header-nav{display:flex;gap:28px;align-items:center}
+.header-link{font-family:var(--font-en);font-size:10px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.45);transition:color .3s}
+.header-link:hover{color:var(--white)}
+.header-cta{font-family:var(--font-en);font-size:10px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--black);background:var(--accent);padding:10px 28px;transition:all .4s cubic-bezier(.22,.61,.36,1)}
+.header-cta:hover{background:var(--accent-light);transform:translateY(-1px);box-shadow:0 4px 16px rgba(200,168,110,.3)}
+
+/* ===== HERO ===== */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;background:var(--black);overflow:hidden}
+.hero-bg{position:absolute;inset:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.55}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(17,17,17,.78) 0%,rgba(17,17,17,.45) 50%,rgba(17,17,17,.72) 100%)}
+.hero-accent-line{position:absolute;top:0;left:48px;width:1px;height:100%;background:linear-gradient(180deg,transparent,rgba(200,168,110,.2) 30%,rgba(200,168,110,.2) 70%,transparent);z-index:1}
+.hero-inner{position:relative;z-index:2;width:100%;max-width:var(--container);margin:0 auto;padding:0 48px;padding-top:120px}
+.hero-eyecatch{font-family:var(--font-en);font-size:10px;font-weight:600;letter-spacing:6px;text-transform:uppercase;color:var(--accent);margin-bottom:32px;position:relative;padding-left:40px}
+.hero-eyecatch::before{content:'';position:absolute;left:0;top:50%;width:28px;height:1px;background:var(--accent)}
+.hero-title{font-family:var(--font-display);font-size:clamp(36px,6vw,72px);font-weight:700;color:var(--white);letter-spacing:2px;line-height:1.15;margin-bottom:24px}
+.hero-title em{font-style:normal;color:var(--accent-light)}
+.hero-subtitle{font-family:var(--font-jp);font-size:clamp(14px,1.5vw,17px);font-weight:200;color:rgba(255,255,255,.5);letter-spacing:var(--ls-jp);line-height:2;margin-bottom:56px;max-width:540px}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:80px}
+.btn-primary{position:relative;overflow:hidden;font-family:var(--font-en);font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--black);background:var(--accent);padding:16px 48px;transition:all .4s cubic-bezier(.22,.61,.36,1);display:inline-block}
+.btn-primary:hover{background:var(--accent-light);transform:translateY(-2px);box-shadow:0 8px 28px rgba(200,168,110,.3)}
+.btn-primary::after{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);transition:left .5s ease}
+.btn-primary:hover::after{left:100%}
+.btn-secondary{font-family:var(--font-en);font-size:11px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.7);padding:16px 48px;border:1px solid rgba(255,255,255,.15);transition:all .4s cubic-bezier(.22,.61,.36,1);display:inline-block}
+.btn-secondary:hover{border-color:rgba(255,255,255,.5);color:var(--white);transform:translateY(-2px)}
+.hero-stats{display:flex;gap:64px;padding-top:48px;border-top:1px solid rgba(255,255,255,.06)}
+.hero-stat-num{font-family:var(--font-display);font-size:clamp(48px,6vw,72px);font-weight:600;color:var(--accent);line-height:1;display:inline-flex;align-items:baseline;min-height:clamp(48px,6vw,72px)}
+.hero-stat-num span{font-family:var(--font-en);font-size:.3em;font-weight:400;margin-left:4px;vertical-align:super;letter-spacing:1px}
+.hero-stat-label{font-family:var(--font-jp);font-size:11px;font-weight:400;color:rgba(255,255,255,.55);letter-spacing:.06em;margin-top:12px}
+.hero-stat-bar{width:32px;height:1px;background:rgba(200,168,110,.4);margin-top:10px}
+/* Cost Down arrow animation */
+.cost-down-svg polyline{stroke-dasharray:80;stroke-dashoffset:80;transition:none}
+.cost-down-svg.animated polyline{stroke-dashoffset:0;transition:stroke-dashoffset 1.5s cubic-bezier(.22,.61,.36,1)}
+.cost-down-svg.animated polyline:nth-child(2){transition-delay:.8s}
+.hero-scroll{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;z-index:2}
+.hero-scroll span{font-family:var(--font-en);font-size:9px;letter-spacing:4px;color:rgba(255,255,255,.2);text-transform:uppercase}
+.hero-scroll-line{width:1px;height:40px;background:linear-gradient(180deg,rgba(255,255,255,.2),transparent);animation:scrollPulse 2.5s ease infinite}
+@keyframes scrollPulse{0%,100%{opacity:.2}50%{opacity:.8}}
+
+/* ===== ABOUT ===== */
+.section-about{padding:var(--section-py) 0;background:var(--off-white)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.about-right{display:flex;flex-direction:column;gap:32px}
+.about-photo{width:100%;aspect-ratio:4/3;object-fit:cover}
+.about-card{padding:36px;border-left:2px solid var(--accent);background:var(--white)}
+.about-card h4{font-family:var(--font-en);font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
+.about-card p{font-family:var(--font-jp);font-size:14px;line-height:2.1;color:var(--gray-dark)}
+
+/* ===== PHOTO GALLERY ===== */
+.photo-gallery{padding:0;background:var(--off-white)}
+.photo-gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:4px}
+.photo-gallery-grid img{width:100%;aspect-ratio:3/2;object-fit:cover;transition:opacity .3s}
+.photo-gallery-grid img:hover{opacity:.8}
+
+/* ===== INLINE CTA ===== */
+.inline-cta{padding:56px 0;text-align:center;background:var(--off-white);border-top:1px solid rgba(0,0,0,.04);border-bottom:1px solid rgba(0,0,0,.04)}
+.inline-cta--dark{background:var(--dark);border-color:rgba(255,255,255,.04)}
+.inline-cta--dark .inline-cta-text{color:rgba(255,255,255,.45)}
+.inline-cta-text{font-family:var(--font-jp);font-size:14px;color:var(--gray-dark);letter-spacing:.06em;margin-bottom:24px}
+.btn-gold-sm{position:relative;overflow:hidden;display:inline-block;font-family:var(--font-en);font-size:10px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--black);background:var(--accent);padding:14px 40px;transition:all .4s cubic-bezier(.22,.61,.36,1)}
+.btn-gold-sm:hover{background:var(--accent-light);transform:translateY(-2px);box-shadow:0 6px 20px rgba(200,168,110,.3)}
+.btn-gold-sm::after{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);transition:left .5s ease}
+.btn-gold-sm:hover::after{left:100%}
+
+/* ===== WORRIES ===== */
+.section-worries{padding:var(--section-py) 0;background:var(--gray-light)}
+.worries-lead{font-family:var(--font-jp);font-size:clamp(18px,2.2vw,24px);font-weight:400;line-height:1.9;letter-spacing:.06em;max-width:680px;margin-bottom:64px}
+.worries-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.worry-item{background:var(--white);padding:32px 28px;position:relative;transition:all .4s cubic-bezier(.22,.61,.36,1)}
+.worry-item::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .4s cubic-bezier(.22,.61,.36,1)}
+.worry-item:hover::before{transform:scaleX(1)}
+.worry-item:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.06)}
+.worry-num{font-family:var(--font-display);font-size:36px;font-weight:600;color:var(--accent);line-height:1;margin-bottom:16px}
+.worry-text{font-family:var(--font-jp);font-size:14px;line-height:2;color:var(--gray-dark)}
+.worry-text strong{color:var(--black);font-weight:600}
+.worries-bridge{margin-top:72px;text-align:center;padding-top:40px;border-top:1px solid rgba(0,0,0,.06)}
+.worries-bridge-text{font-family:var(--font-jp);font-size:clamp(16px,1.8vw,22px);font-weight:400;color:var(--black);letter-spacing:.06em}
+.worries-bridge-text em{font-style:normal;color:var(--accent);font-weight:600}
+.worries-bridge-arrow{display:block;margin:24px auto 0;width:1px;height:40px;background:linear-gradient(180deg,var(--accent),transparent)}
+
+/* ===== COMPARISON DIAGRAM (参考: KMC/ray-comide) ===== */
+.section-comparison{padding:100px 0;background:var(--off-white)}
+.comparison-grid{display:grid;grid-template-columns:1fr 60px 1fr;gap:0;align-items:stretch;margin-top:56px}
+.comparison-box{padding:40px 36px;position:relative}
+.comparison-box--before{background:var(--gray-light);border:1px solid rgba(0,0,0,.06)}
+.comparison-box--after{background:var(--dark);color:var(--off-white);border:1px solid rgba(200,168,110,.15)}
+.comparison-box-label{font-family:var(--font-en);font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:20px;display:inline-block;padding:4px 14px}
+.comparison-box--before .comparison-box-label{background:var(--gray-mid);color:var(--white)}
+.comparison-box--after .comparison-box-label{background:var(--accent);color:var(--black)}
+.comparison-box-title{font-family:var(--font-jp);font-size:16px;font-weight:600;margin-bottom:20px;line-height:1.6}
+.comparison-box--after .comparison-box-title{color:var(--accent-light)}
+.comparison-list{list-style:none;display:flex;flex-direction:column;gap:12px}
+.comparison-list li{font-family:var(--font-jp);font-size:13px;line-height:1.8;padding-left:20px;position:relative}
+.comparison-box--before .comparison-list li{color:var(--gray-dark)}
+.comparison-box--before .comparison-list li::before{content:'';position:absolute;left:0;top:10px;width:8px;height:1px;background:var(--gray-mid)}
+.comparison-box--after .comparison-list li{color:rgba(255,255,255,.6)}
+.comparison-box--after .comparison-list li::before{content:'';position:absolute;left:0;top:6px;width:8px;height:8px;border:1px solid var(--accent);border-radius:50%}
+.comparison-arrow{display:flex;align-items:center;justify-content:center;background:var(--off-white)}
+.comparison-arrow svg{color:var(--accent)}
+
+/* ===== PROCESS — One-Stop Flow ===== */
+.section-process{padding:var(--section-py) 0;background:var(--black);color:var(--off-white);position:relative;overflow:hidden}
+.section-process::before{content:'';position:absolute;top:0;right:0;width:40%;height:100%;background:radial-gradient(ellipse at 100% 50%,rgba(200,168,110,.03) 0%,transparent 60%)}
+.process-intro{font-family:var(--font-jp);font-size:15px;line-height:2.4;color:rgba(255,255,255,.4);max-width:700px;margin-bottom:80px}
+.process-visual{display:grid;grid-template-columns:1fr 400px;gap:56px;align-items:start}
+.process-flow{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;margin-bottom:2px}
+.process-row-header{font-family:var(--font-en);font-size:10px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:20px;display:flex;align-items:center;gap:16px}
+.process-row-header::after{content:'';flex:1;height:1px;background:rgba(200,168,110,.15)}
+.process-card{padding:28px 20px;background:rgba(200,168,110,.04);border-top:1px solid rgba(200,168,110,.1);transition:all .4s cubic-bezier(.22,.61,.36,1);position:relative}
+.process-card:hover{background:rgba(200,168,110,.08)}
+.process-card-icon{width:32px;height:32px;margin-bottom:14px;color:var(--accent);opacity:.6}
+.process-card-icon svg{width:100%;height:100%}
+.process-card-num{font-family:var(--font-en);font-size:10px;font-weight:600;letter-spacing:2px;color:var(--accent);margin-bottom:8px}
+.process-card-title{font-family:var(--font-jp);font-size:13px;font-weight:500;line-height:1.5;margin-bottom:8px;color:rgba(255,255,255,.85)}
+.process-card-desc{font-family:var(--font-jp);font-size:11px;line-height:1.8;color:rgba(255,255,255,.3)}
+.process-photo{position:relative;overflow:hidden}
+.process-photo img{width:100%;height:100%;object-fit:cover;min-height:400px}
+.process-photo-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(17,17,17,.2) 0%,rgba(17,17,17,.7) 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:36px}
+.process-photo-text{font-family:var(--font-jp);font-size:14px;line-height:2;color:rgba(255,255,255,.7)}
+.process-photo-text strong{color:var(--accent-light);font-weight:500;display:block;font-size:16px;margin-bottom:8px}
+.process-onestop-banner{margin-top:48px;padding:32px 40px;background:rgba(200,168,110,.06);border:1px solid rgba(200,168,110,.12);display:flex;align-items:center;gap:24px}
+.process-onestop-icon{flex-shrink:0;width:48px;height:48px;border:1px solid var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--accent)}
+.process-onestop-text{font-family:var(--font-jp);font-size:14px;line-height:2;color:rgba(255,255,255,.55)}
+.process-onestop-text strong{color:var(--accent-light);font-weight:500}
+
+/* ===== CTA BAND ===== */
+.cta-band{position:relative;padding:96px 0;overflow:hidden;text-align:center}
+.cta-band-bg{position:absolute;inset:0;z-index:0}
+.cta-band-bg img{width:100%;height:100%;object-fit:cover}
+.cta-band-bg::after{content:'';position:absolute;inset:0;background:rgba(17,17,17,.82)}
+.cta-band .container{position:relative;z-index:1}
+.cta-band-text{font-family:var(--font-jp);font-size:clamp(18px,2vw,22px);font-weight:300;color:var(--off-white);letter-spacing:.06em;margin-bottom:12px;line-height:1.8}
+.cta-band-sub{font-family:var(--font-jp);font-size:13px;color:rgba(255,255,255,.35);margin-bottom:40px;letter-spacing:.06em}
+.cta-buttons{display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
+.btn-gold{position:relative;overflow:hidden;display:inline-block;font-family:var(--font-en);font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--black);background:var(--accent);padding:16px 52px;transition:all .4s cubic-bezier(.22,.61,.36,1)}
+.btn-gold:hover{background:var(--accent-light);transform:translateY(-2px);box-shadow:0 8px 28px rgba(200,168,110,.3)}
+.btn-gold::after{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);transition:left .5s ease}
+.btn-gold:hover::after{left:100%}
+.btn-outline{display:inline-block;font-family:var(--font-en);font-size:11px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--off-white);padding:16px 52px;border:1px solid rgba(255,255,255,.2);transition:all .4s cubic-bezier(.22,.61,.36,1)}
+.btn-outline:hover{border-color:rgba(255,255,255,.5);color:var(--white);transform:translateY(-2px)}
+
+/* ===== WHY FLAT BASE ===== */
+.expertise-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-bottom:72px}
+.expertise-strengths{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-bottom:72px}
+.section-why{padding:var(--section-py) 0;background:var(--off-white)}
+.why-lead{font-family:var(--font-jp);font-size:clamp(18px,2.2vw,26px);font-weight:300;line-height:1.9;letter-spacing:.06em;max-width:680px;margin-bottom:80px}
+.why-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.why-card{background:var(--white);position:relative;transition:all .4s cubic-bezier(.22,.61,.36,1);overflow:hidden}
+.why-card::before{content:'';position:absolute;bottom:0;left:0;width:100%;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .4s cubic-bezier(.22,.61,.36,1)}
+.why-card:hover::before{transform:scaleX(1)}
+.why-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(0,0,0,.08)}
+.why-card-img{width:100%;height:180px;object-fit:cover}
+.why-card-body{padding:36px 32px}
+.why-card-num{font-family:var(--font-display);font-size:56px;font-weight:500;color:rgba(200,168,110,.12);line-height:1;margin-bottom:16px}
+.why-card-title{font-family:var(--font-jp);font-size:16px;font-weight:600;line-height:1.6;margin-bottom:20px;letter-spacing:.04em}
+.why-card-stat{display:flex;align-items:baseline;gap:6px;margin-bottom:8px}
+.why-card-stat-num{font-family:var(--font-display);font-size:clamp(48px,5vw,60px);font-weight:600;color:var(--accent);line-height:1}
+.why-card-stat-unit{font-family:var(--font-jp);font-size:12px;color:var(--gray-mid)}
+.why-card-stat-bar{width:40px;height:1px;background:var(--accent);margin-bottom:20px}
+.why-card-desc{font-family:var(--font-jp);font-size:13px;line-height:2.1;color:var(--gray-dark)}
+
+/* ===== THREE E ===== */
+.section-three-e{padding:var(--section-py) 0;background:var(--dark);color:var(--off-white);position:relative}
+.three-e-intro{font-family:var(--font-jp);font-size:15px;line-height:2.4;color:rgba(255,255,255,.4);max-width:700px;margin-bottom:80px}
+.three-e-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.three-e-card{background:rgba(255,255,255,.02);border-top:1px solid rgba(200,168,110,.1);transition:all .4s cubic-bezier(.22,.61,.36,1);position:relative;overflow:hidden}
+.three-e-card:hover{background:rgba(200,168,110,.04)}
+.three-e-card-img{width:100%;height:200px;object-fit:cover;opacity:.5;transition:opacity .4s}
+.three-e-card:hover .three-e-card-img{opacity:.7}
+.three-e-card-body{padding:36px 32px}
+.three-e-icon{width:40px;height:40px;margin-bottom:20px;color:var(--accent);opacity:.5}
+.three-e-icon svg{width:100%;height:100%}
+.three-e-num{font-family:var(--font-en);font-size:10px;font-weight:600;letter-spacing:3px;color:rgba(200,168,110,.4);margin-bottom:12px}
+.three-e-title{font-family:var(--font-display);font-size:28px;font-weight:600;letter-spacing:2px;margin-bottom:8px;color:var(--accent-light)}
+.three-e-subtitle{font-family:var(--font-jp);font-size:13px;font-weight:300;margin-bottom:20px;color:rgba(255,255,255,.4)}
+.three-e-desc{font-family:var(--font-jp);font-size:13px;line-height:2.1;color:rgba(255,255,255,.35)}
+
+/* ===== SPECIALIST ===== */
+.section-specialist{padding:var(--section-py) 0;background:var(--off-white)}
+.specialist-intro{font-family:var(--font-jp);font-size:15px;line-height:2.4;color:var(--gray-dark);max-width:700px;margin-bottom:80px}
+.specialist-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.specialist-card{text-align:center;padding:40px 20px;background:var(--white);transition:all .4s cubic-bezier(.22,.61,.36,1)}
+.specialist-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.06)}
+.specialist-icon{width:56px;height:56px;margin:0 auto 24px;color:var(--accent);opacity:.7}
+.specialist-icon svg{width:100%;height:100%}
+.specialist-title{font-family:var(--font-en);font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+.specialist-desc{font-family:var(--font-jp);font-size:13px;line-height:1.8;color:var(--gray-dark)}
+
+/* ===== SCENE PHOTOS (Full-width strip) ===== */
+.scene-strip{position:relative;overflow:hidden;height:360px}
+.scene-strip img{width:100%;height:100%;object-fit:cover}
+.scene-strip-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(17,17,17,.85) 0%,rgba(17,17,17,.4) 50%,rgba(17,17,17,.85) 100%);display:flex;align-items:center;justify-content:center}
+.scene-strip-text{text-align:center}
+.scene-strip-text h3{font-family:var(--font-display);font-size:clamp(28px,4vw,48px);font-weight:700;color:var(--off-white);letter-spacing:3px;margin-bottom:8px}
+.scene-strip-text p{font-family:var(--font-jp);font-size:14px;color:rgba(255,255,255,.4);letter-spacing:.08em}
+
+/* ===== FLOW ===== */
+.section-flow{padding:var(--section-py) 0;background:var(--gray-light)}
+.flow-phases{display:flex;flex-direction:column;gap:72px;margin-top:72px}
+.flow-phase-label{font-family:var(--font-en);font-size:10px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:36px;padding-bottom:12px;border-bottom:1px solid rgba(200,168,110,.2)}
+.flow-timeline{display:flex;position:relative}
+.flow-timeline::before{content:'';position:absolute;top:22px;left:22px;right:22px;height:1px;background:linear-gradient(90deg,var(--accent),var(--accent-light));z-index:0}
+.flow-step{flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;z-index:1;padding:0 10px}
+.flow-dot{width:44px;height:44px;border-radius:50%;background:var(--white);border:2px solid var(--accent);display:flex;align-items:center;justify-content:center;font-family:var(--font-en);font-size:13px;font-weight:600;color:var(--accent);margin-bottom:18px;transition:all .4s cubic-bezier(.22,.61,.36,1)}
+.flow-step:hover .flow-dot{background:var(--accent);color:var(--white);transform:scale(1.1);box-shadow:0 4px 16px rgba(200,168,110,.25)}
+.flow-title{font-family:var(--font-jp);font-size:13px;font-weight:600;margin-bottom:6px;line-height:1.4;letter-spacing:.04em}
+.flow-desc{font-family:var(--font-jp);font-size:11px;line-height:1.8;color:var(--gray-dark)}
+
+/* ===== FAQ ===== */
+.section-faq{padding:var(--section-py) 0;background:var(--off-white)}
+.faq-list{max-width:800px;margin-top:64px}
+.faq-item{border-bottom:1px solid rgba(0,0,0,.05)}
+.faq-q{font-family:var(--font-jp);font-size:15px;font-weight:400;padding:28px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;transition:color .3s;letter-spacing:.04em}
+.faq-q:hover{color:var(--accent)}
+.faq-q::after{content:'+';font-family:var(--font-en);font-size:18px;font-weight:300;color:var(--accent);flex-shrink:0;transition:transform .3s}
+.faq-q.open::after{transform:rotate(45deg)}
+.faq-a{font-family:var(--font-jp);font-size:14px;line-height:2.1;color:var(--gray-dark);max-height:0;overflow:hidden;transition:max-height .4s ease,padding .4s ease}
+.faq-a.open{max-height:300px;padding:0 0 28px 0}
+
+/* ===== TEAM ===== */
+.section-team{padding:var(--section-py) 0;background:var(--gray-light)}
+.team-intro{font-family:var(--font-jp);font-size:15px;line-height:2.4;color:var(--gray-dark);max-width:700px;margin-bottom:80px}
+.team-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px}
+.team-card{display:grid;grid-template-columns:150px 1fr;gap:28px;align-items:start;background:var(--white);padding:36px;transition:all .4s cubic-bezier(.22,.61,.36,1)}
+.team-card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,.06)}
+.team-avatar{width:150px;height:150px;border-radius:50%;overflow:hidden;flex-shrink:0}
+.team-avatar img{width:100%;height:100%;object-fit:cover;object-position:center 20%}
+.team-name{font-family:var(--font-jp);font-size:15px;font-weight:600;margin-bottom:2px;letter-spacing:.04em}
+.team-name-en{font-family:var(--font-en);font-size:10px;font-weight:500;letter-spacing:2px;color:var(--gray-mid);text-transform:uppercase;margin-bottom:6px}
+.team-role{font-family:var(--font-jp);font-size:11px;font-weight:400;color:var(--accent);letter-spacing:.04em;margin-bottom:4px}
+.team-specialty{font-family:var(--font-en);font-size:9px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gray-mid);margin-bottom:12px;display:flex;align-items:center;gap:6px}
+.team-specialty::before{content:'';width:12px;height:1px;background:var(--accent)}
+.team-bio{font-family:var(--font-jp);font-size:12px;line-height:2;color:var(--gray-dark)}
+
+/* ===== COMPANY ===== */
+.section-company{padding:var(--section-py) 0;background:var(--off-white)}
+.company-layout{display:grid;grid-template-columns:1fr 280px;gap:64px;align-items:start;margin-top:56px}
+.company-row{display:grid;grid-template-columns:140px 1fr;padding:20px 0;border-bottom:1px solid rgba(0,0,0,.05)}
+.company-label{font-family:var(--font-jp);font-size:12px;font-weight:400;color:var(--gray-mid);letter-spacing:.04em}
+.company-value{font-family:var(--font-jp);font-size:13px;line-height:2}
+.company-photos{display:flex;flex-direction:column;gap:8px}
+.company-photo{width:100%;object-fit:cover}
+
+/* ===== CONTACT ===== */
+.section-contact{padding:var(--section-py) 0;background:var(--black);color:var(--off-white)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.contact-lead{font-family:var(--font-jp);font-size:15px;line-height:2.4;color:rgba(255,255,255,.4);margin-bottom:40px}
+.contact-info-item{margin-bottom:24px}
+.contact-info-label{font-family:var(--font-en);font-size:10px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+.contact-info-value{font-family:var(--font-jp);font-size:13px;color:rgba(255,255,255,.5)}
+.contact-form{display:flex;flex-direction:column;gap:20px}
+.form-group{display:flex;flex-direction:column;gap:8px}
+.form-label{font-family:var(--font-jp);font-size:11px;font-weight:300;color:rgba(255,255,255,.35);letter-spacing:.06em}
+.form-req{color:var(--accent)}
+.form-input,.form-textarea{font-family:var(--font-jp);font-size:13px;padding:14px 16px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);color:var(--off-white);outline:none;transition:border-color .3s,box-shadow .3s;letter-spacing:.04em}
+.form-input:focus,.form-textarea:focus{border-color:rgba(200,168,110,.4);box-shadow:0 0 0 3px rgba(200,168,110,.06)}
+.form-textarea{resize:vertical;min-height:120px}
+.form-submit{position:relative;overflow:hidden;font-family:var(--font-en);font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--black);background:var(--accent);border:none;padding:16px 48px;cursor:pointer;transition:all .4s cubic-bezier(.22,.61,.36,1);align-self:flex-start}
+.form-submit:hover{background:var(--accent-light);transform:translateY(-2px);box-shadow:0 6px 20px rgba(200,168,110,.3)}
+.form-submit::after{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);transition:left .5s ease}
+.form-submit:hover::after{left:100%}
+
+/* ===== FOOTER ===== */
+.footer{padding:48px 0;background:var(--black);border-top:1px solid rgba(255,255,255,.03);text-align:center}
+.footer-logo{display:inline-block;margin-bottom:12px}
+.footer-logo-img{height:14px;width:auto;opacity:.3;margin:0 auto}
+.footer-copy{font-family:var(--font-en);font-size:10px;color:rgba(255,255,255,.12);letter-spacing:2px}
+
+/* ===== DIAGRAM / INFOGRAPHIC ===== */
+.about-diagram{margin-top:48px;padding:40px;background:var(--white);border:1px solid rgba(0,0,0,.06);position:relative}
+.about-diagram-title{font-family:var(--font-en);font-size:10px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:24px}
+.diagram-flow{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap}
+.diagram-node{text-align:center;padding:20px 16px;background:var(--off-white);border:1px solid rgba(0,0,0,.06);min-width:120px;transition:all .4s;position:relative}
+.diagram-node:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:0 8px 24px rgba(200,168,110,.1)}
+.diagram-node-icon{width:36px;height:36px;margin:0 auto 10px;color:var(--accent);opacity:.7}
+.diagram-node-icon svg{width:100%;height:100%}
+.diagram-node-label{font-family:var(--font-jp);font-size:12px;font-weight:500;color:var(--black);line-height:1.5}
+.diagram-node-sub{font-family:var(--font-en);font-size:9px;color:var(--gray-mid);letter-spacing:1px;margin-top:4px}
+.diagram-arrow{color:var(--accent);flex-shrink:0;opacity:.5}
+.diagram-arrow svg{width:20px;height:20px}
+.diagram-center-node{text-align:center;padding:24px 20px;background:var(--dark);min-width:140px;border:1px solid rgba(200,168,110,.2)}
+.diagram-center-node .diagram-node-label{color:var(--accent-light);font-weight:600}
+.diagram-center-node .diagram-node-icon{color:var(--accent)}
+
+/* About photo mosaic */
+.about-photo-mosaic{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:20px}
+.about-photo-mosaic img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.about-photo-mosaic img:first-child{grid-row:1/3;aspect-ratio:auto;height:100%}
+
+/* Comparison icons */
+.comparison-icon-row{display:flex;gap:16px;margin-top:20px;flex-wrap:wrap}
+.comparison-icon-item{display:flex;align-items:center;gap:8px;padding:8px 14px;border-radius:4px;font-family:var(--font-jp);font-size:11px}
+.comparison-box--before .comparison-icon-item{background:rgba(0,0,0,.04);color:var(--gray-dark)}
+.comparison-box--after .comparison-icon-item{background:rgba(200,168,110,.08);color:var(--accent-light)}
+.comparison-icon-item svg{width:16px;height:16px;flex-shrink:0}
+.comparison-box--before .comparison-icon-item svg{color:var(--gray-mid)}
+.comparison-box--after .comparison-icon-item svg{color:var(--accent)}
+
+/* Why infographic numbers */
+.why-card-badge{position:absolute;top:12px;right:12px;background:var(--accent);color:var(--black);font-family:var(--font-en);font-size:9px;font-weight:700;letter-spacing:2px;padding:6px 14px;text-transform:uppercase;z-index:1}
+
+/* Three E diagram */
+.three-e-diagram{margin-top:64px;padding:40px;background:rgba(255,255,255,.02);border:1px solid rgba(200,168,110,.08)}
+.three-e-diagram-title{font-family:var(--font-en);font-size:10px;font-weight:600;letter-spacing:3px;color:var(--accent);text-transform:uppercase;margin-bottom:24px;text-align:center}
+.three-e-flow-visual{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap}
+.three-e-flow-node{text-align:center;padding:24px 20px;min-width:140px;border:1px solid rgba(200,168,110,.15);background:rgba(200,168,110,.03);transition:all .4s}
+.three-e-flow-node:hover{background:rgba(200,168,110,.08);transform:translateY(-4px)}
+.three-e-flow-node-num{font-family:var(--font-en);font-size:9px;font-weight:600;letter-spacing:3px;color:var(--accent);margin-bottom:8px}
+.three-e-flow-node-title{font-family:var(--font-display);font-size:22px;font-weight:600;color:var(--accent-light);letter-spacing:1px;margin-bottom:6px}
+.three-e-flow-node-desc{font-family:var(--font-jp);font-size:11px;color:rgba(255,255,255,.35);line-height:1.6}
+.three-e-flow-arrow{color:var(--accent);opacity:.3}
+.three-e-flow-arrow svg{width:24px;height:24px}
+.three-e-result{text-align:center;margin-top:24px;padding-top:20px;border-top:1px solid rgba(200,168,110,.1)}
+.three-e-result-text{font-family:var(--font-jp);font-size:14px;color:rgba(255,255,255,.5)}
+.three-e-result-text em{font-style:normal;color:var(--accent-light);font-weight:500}
+
+/* Specialist with photo bg */
+.specialist-card--photo{position:relative;overflow:hidden}
+.specialist-card--photo .specialist-bg{position:absolute;inset:0;z-index:0}
+.specialist-card--photo .specialist-bg img{width:100%;height:100%;object-fit:cover;opacity:.12;transition:opacity .4s}
+.specialist-card--photo:hover .specialist-bg img{opacity:.2}
+.specialist-card--photo>*:not(.specialist-bg){position:relative;z-index:1}
+
+/* Decorative geometric patterns */
+.geo-pattern{position:absolute;pointer-events:none;z-index:0;opacity:.03}
+.geo-pattern--dots{background-image:radial-gradient(circle,var(--accent) 1px,transparent 1px);background-size:20px 20px}
+.geo-pattern--lines{background:repeating-linear-gradient(45deg,transparent,transparent 10px,var(--accent) 10px,var(--accent) 10.5px)}
+.geo-pattern--grid{background-image:linear-gradient(rgba(200,168,110,.3) 1px,transparent 1px),linear-gradient(90deg,rgba(200,168,110,.3) 1px,transparent 1px);background-size:40px 40px}
+
+/* Flow section enhanced */
+.flow-connector{display:flex;align-items:center;justify-content:center;padding:24px 0}
+.flow-connector svg{color:var(--accent);opacity:.4}
+
+/* Scene strip with real photos */
+.scene-strip-photos{display:grid;grid-template-columns:repeat(3,1fr);height:100%;position:absolute;inset:0}
+.scene-strip-photos img{width:100%;height:100%;object-fit:cover}
+
+/* Stats bar mini chart */
+.stat-mini-bar{display:flex;gap:2px;align-items:flex-end;height:32px;margin-top:8px}
+.stat-mini-bar span{display:block;width:4px;background:var(--accent);opacity:.3;border-radius:1px;transition:height .6s cubic-bezier(.22,.61,.36,1)}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:960px){
+  .container,.container--wide{padding:0 32px}
+  .header{padding:16px 32px}
+  .header.scrolled{padding:12px 32px}
+  .hero-inner{padding:0 32px;padding-top:100px}
+  .hero-accent-line{left:32px}
+  .about-grid,.contact-grid{grid-template-columns:1fr;gap:48px}
+  .why-cards,.three-e-grid{grid-template-columns:1fr}
+  .why-card-img,.three-e-card-img{height:200px}
+  .process-visual{grid-template-columns:1fr}
+  .process-photo{display:none}
+  .process-flow{grid-template-columns:repeat(2,1fr)}
+  .comparison-grid{grid-template-columns:1fr;gap:0}
+  .comparison-arrow{padding:16px;transform:rotate(90deg)}
+  .specialist-grid{grid-template-columns:repeat(2,1fr)}
+  .team-grid{grid-template-columns:1fr}
+  .worries-grid{grid-template-columns:1fr}
+  .hero-stats{flex-direction:column;gap:28px}
+  .header-link{display:none}
+  .company-layout{grid-template-columns:1fr;gap:36px}
+  .photo-gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .scene-strip{height:260px}
+  .diagram-flow{gap:8px}
+  .diagram-node{min-width:90px;padding:14px 10px}
+  .diagram-center-node{min-width:110px;padding:18px 14px}
+  .diagram-arrow svg{width:16px;height:16px}
+  .about-photo-mosaic{grid-template-columns:1fr}
+  .about-photo-mosaic img:first-child{grid-row:auto}
+  .three-e-flow-visual{flex-direction:column}
+  .three-e-flow-arrow{transform:rotate(90deg)}
+  .comparison-icon-row{gap:8px}
+  .flow-timeline{flex-direction:column;gap:0}
+  .flow-timeline::before{top:22px;bottom:22px;left:22px;right:auto;width:1px;height:auto}
+  .flow-step{flex-direction:row;text-align:left;align-items:flex-start;padding:0 0 24px 0}
+  .flow-dot{margin-bottom:0;margin-right:20px;flex-shrink:0}
+}
+@media(max-width:600px){
+  .container,.container--wide{padding:0 20px}
+  .header{padding:14px 20px}
+  .hero-inner{padding:0 20px;padding-top:80px}
+  .hero-accent-line{left:20px}
+  :root{--section-py:96px}
+  .process-flow{grid-template-columns:1fr}
+  .specialist-grid{grid-template-columns:1fr 1fr}
+  .team-card{grid-template-columns:1fr;text-align:center}
+  .team-avatar{margin:0 auto}
+  .team-specialty{justify-content:center}
+  .hero-ctas{flex-direction:column;align-items:flex-start}
+  .hero-stat-num{font-size:clamp(40px,12vw,56px)}
+  .about-diagram{padding:24px 16px}
+  .diagram-node{min-width:80px;padding:12px 8px}
+  .diagram-node-label{font-size:11px}
+  .diagram-center-node{min-width:100px}
+  .three-e-diagram{padding:24px 16px}
+  .three-e-diagram{padding:24px 16px}
+  .why-card-stat-num{font-size:48px}
+  .company-layout{grid-template-columns:1fr}
+  .photo-gallery-grid{grid-template-columns:1fr 1fr}
+  .expertise-stats{grid-template-columns:repeat(2,1fr) !important}
+  .expertise-strengths{grid-template-columns:1fr !important}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <a href="https://flat-base.jp/" class="header-logo">
+    <img src="img/fb_logo-w.svg" alt="FLAT BASE" class="header-logo-img">
+  </a>
+  <nav class="header-nav">
+    <a href="#about" class="header-link">About</a>
+    <a href="#why" class="header-link">Strengths</a>
+    <a href="#process" class="header-link">Service</a>
+    <a href="#flow" class="header-link">Flow</a>
+    <a href="#team" class="header-link">Team</a>
+    <a href="#contact" class="header-cta">Contact</a>
+  </nav>
+</header>
+
+<main>
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1670028514318-0ac718c0590d?w=1600&h=900&fit=crop&q=80" alt="PRイベント・ステージ演出・照明・一貫対応" loading="eager">
+  </div>
+  <div class="hero-accent-line"></div>
+  <div class="hero-inner">
+    <p class="hero-eyecatch">FLAT BASE inc.</p>
+    <h1 class="hero-title">THE ONLY ONES WITH<br><em>THE SECRET TO PR SUCCESS.</em></h1>
+    <p style="font-family:var(--font-jp);font-size:clamp(15px,1.6vw,18px);font-weight:400;color:var(--white);letter-spacing:.08em;line-height:2;margin-bottom:40px;max-width:600px">
+      PRイベントを成功させるための秘訣を持つ、<br>業界唯一の制作会社。<br>企画から運営まで、すべてを熟知したプロ集団。
+    </p>
+    <div class="hero-ctas">
+      <a href="#contact" class="btn-primary">Contact Us</a>
+      <a href="#about" class="btn-secondary">Learn More</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-num" data-count="60">0<span>+/yr</span></div>
+        <div class="hero-stat-label">年間PRイベント制作実績</div>
+        <div class="hero-stat-bar"></div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num" data-count="12">0<span>yr</span></div>
+        <div class="hero-stat-label">業界最大手PR会社<br>イベント事業部での経験</div>
+        <div class="hero-stat-bar"></div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num" style="display:flex;align-items:center;gap:8px">
+          <svg class="cost-down-svg" width="clamp(32px,4vw,48px)" height="clamp(32px,4vw,48px)" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" style="flex-shrink:0"><polyline points="1 6 8.5 10.5 13.5 8.5 23 18"/><polyline points="17 18 23 18 23 12"/></svg>
+          <span style="font-size:clamp(28px,3.5vw,42px);vertical-align:baseline;margin-left:0">Cost Down</span>
+        </div>
+        <div class="hero-stat-label">高いコストパフォーマンス</div>
+        <div class="hero-stat-bar"></div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll"><span>Scroll</span><div class="hero-scroll-line"></div></div>
+</section>
+
+
+<!-- ===== ABOUT ===== -->
+<section class="section-about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="fade-in">
+        <div class="section-label section-label--muted">About PR Events</div>
+        <h2 class="heading-display">What is a<br>PR Event?</h2>
+        <p class="heading-jp">PRイベント（プレス向け）とは</p>
+        <p class="text-body">
+          PRイベントとは、企業の商品・サービス・メッセージを、メディアを通じて効果的に届けるPR手法です。
+          オンラインからリアルイベントまで形式は多様で、近年はメディアに加え、ブランド親和性の高いインフルエンサーを招いた開催も増えています。
+        </p>
+        <p class="text-body" style="margin-top:20px">
+          PRイベントは、ブランドと消費者をつなぐ「架け橋」。メディア露出の創出、エンゲージメントの向上、企業成長を後押しする重要な施策です。
+        </p>
+      </div>
+      <div class="about-right fade-in">
+        <div class="about-photo-mosaic">
+          <img src="img/web/260128_0021.jpg" alt="FLAT BASEスタッフの打ち合わせ風景" loading="lazy">
+          <img src="img/web/260128_0012.jpg" alt="イベント会場準備" loading="lazy">
+          <img src="img/web/260128_0022.jpg" alt="制作現場" loading="lazy">
+        </div>
+        <div class="about-card">
+          <h4>Key Point</h4>
+          <p>PRイベントは多くの場合、広告代理店やPR会社と連携しながら進行します。目的設計からメディア選定、演出・造作、当日運営まで、複数の専門領域が組み合わさって構築されます。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROCESS — Full Support : Planning to Execution ===== -->
+<section class="section-process" id="process">
+  <div class="geo-pattern geo-pattern--dots" style="top:0;right:0;width:300px;height:300px"></div>
+  <div class="container">
+    <div class="section-label section-label--gold">Full Support</div>
+    <h2 class="heading-en" style="color:var(--off-white)">Full Support :<br>Planning to Execution</h2>
+    <p class="heading-jp heading-jp--light">企画から運営まで、01〜08を熟知したプロ集団が対応</p>
+    <p class="process-intro">
+      PRイベントは、戦略設計から当日運営まで、多くの専門領域が連携して成り立ちます。
+      <span class="accent-text--light">目的設計やメディア選定などの上流工程（01〜05）は主に広告代理店・PR会社の領域ですが、FLAT BASEはこれらを含む全8工程を熟知したプロ集団が一貫対応します。</span>
+    </p>
+
+    <div class="process-visual">
+      <div>
+        <div class="process-row-header fade-in">All Steps by FLAT BASE</div>
+        <div class="process-flow fade-in">
+          <div class="process-card">
+            <div class="process-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+            <div class="process-card-num">01</div>
+            <div class="process-card-title">目的・KPI設定</div>
+            <div class="process-card-desc">メディア露出数・SNSリーチの指標設計</div>
+          </div>
+          <div class="process-card">
+            <div class="process-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+            <div class="process-card-num">02</div>
+            <div class="process-card-title">会場選定</div>
+            <div class="process-card-desc">導線・フォトエリア・取材スペース最適化</div>
+          </div>
+          <div class="process-card">
+            <div class="process-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+            <div class="process-card-num">03</div>
+            <div class="process-card-title">予算管理</div>
+            <div class="process-card-desc">造作・テクニカル費用の最適配分</div>
+          </div>
+          <div class="process-card">
+            <div class="process-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+            <div class="process-card-num">04</div>
+            <div class="process-card-title">出演者・登壇者選定</div>
+            <div class="process-card-desc">タレント・インフルエンサーのキャスティング</div>
+          </div>
+          <div class="process-card">
+            <div class="process-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+            <div class="process-card-num">05</div>
+            <div class="process-card-title">メディア選定</div>
+            <div class="process-card-desc">メディアリスト・案内状・メディア誘致</div>
+          </div>
+          <div class="process-card">
+            <div class="process-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+            <div class="process-card-num">06</div>
+            <div class="process-card-title">演出・造作</div>
+            <div class="process-card-desc">舞台セット・映像・音響・照明の制作</div>
+          </div>
+          <div class="process-card">
+            <div class="process-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+            <div class="process-card-num">07</div>
+            <div class="process-card-title">実施計画書・台本</div>
+            <div class="process-card-desc">タイムスケジュール・MCキュー出し</div>
+          </div>
+          <div class="process-card">
+            <div class="process-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+            <div class="process-card-num">08</div>
+            <div class="process-card-title">当日運営・進行</div>
+            <div class="process-card-desc">舞台監督によるメディア対応・進行管理</div>
+          </div>
+        </div>
+      </div>
+      <!-- Side photo -->
+      <div class="process-photo fade-in">
+        <img src="https://images.unsplash.com/photo-1631387019069-2ff599943f9a?w=800&h=1000&fit=crop&q=80" alt="PRイベント現場スタッフ" loading="lazy">
+        <div class="process-photo-overlay">
+          <p class="process-photo-text">
+            <strong>PRイベントの現場から</strong>
+            会場設営・照明・音響・映像すべてを統括し、メディアが「記事にしたくなる」空間を創り上げます。
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="process-onestop-banner fade-in">
+      <div class="process-onestop-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <p class="process-onestop-text">
+        <strong>FLAT BASEは、01〜08すべての工程を熟知した「PRイベントのプロ集団」です。</strong><br>
+        各領域のスペシャリストが直接サポートし、イベント全体の成功をリードします。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PHOTO GALLERY ===== -->
+<div class="photo-gallery">
+  <div class="photo-gallery-grid">
+    <img src="https://images.unsplash.com/photo-1675977586492-fec42f8d00af?w=800&h=600&fit=crop&q=80" alt="イベント撮影・放送カメラ" loading="lazy">
+    <img src="img/web/260128_0017.jpg" alt="FLAT BASEオフィス" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1507961460271-ab6304a025c7?w=800&h=600&fit=crop&q=80" alt="ステージマイク・演出照明" loading="lazy">
+    <img src="img/web/260128_0023.jpg" alt="スタッフミーティング" loading="lazy">
+  </div>
+</div>
+
+<!-- ===== INLINE CTA ===== -->
+<div class="inline-cta">
+  <p class="inline-cta-text">PRイベントの企画・制作について、まずはお気軽にご相談ください</p>
+  <a href="#contact" class="btn-gold-sm">Free Consultation</a>
+</div>
+
+<!-- ===== WORRIES ===== -->
+<section class="section-worries" id="worries" style="position:relative;overflow:hidden">
+  <div class="geo-pattern geo-pattern--grid" style="bottom:0;right:-50px;width:250px;height:250px"></div>
+  <div class="container">
+    <div class="section-label section-label--muted">Common Challenges</div>
+    <h2 class="worries-lead fade-in">PRイベントの制作で、<br>こんなお悩みはありませんか？</h2>
+    <div class="worries-grid fade-in">
+      <div class="worry-item">
+        <div class="worry-num">01</div>
+        <p class="worry-text">イベント制作会社に依頼しているが、<strong>PR視点の設計が弱く</strong>、メディア露出につながらない</p>
+      </div>
+      <div class="worry-item">
+        <div class="worry-num">02</div>
+        <p class="worry-text">代理店やPR会社の意図を、制作会社が正しく理解してくれず、<strong>手戻りが多い</strong></p>
+      </div>
+      <div class="worry-item">
+        <div class="worry-num">03</div>
+        <p class="worry-text">造作やテクニカル<strong>費用が膨らみがち</strong>で、予算管理が難しい</p>
+      </div>
+      <div class="worry-item">
+        <div class="worry-num">04</div>
+        <p class="worry-text">記者会見・発表会の演出・進行を<strong>安心して任せられるパートナー</strong>がいない</p>
+      </div>
+      <div class="worry-item">
+        <div class="worry-num">05</div>
+        <p class="worry-text">上流（戦略）と下流（制作）が<strong>分断されており</strong>、意図が正しく伝わらない</p>
+      </div>
+      <div class="worry-item">
+        <div class="worry-num">06</div>
+        <p class="worry-text">複数のベンダーを管理するのが大変で、<strong>すべてワンストップで任せたい</strong></p>
+      </div>
+    </div>
+    <div class="worries-bridge fade-in">
+      <p class="worries-bridge-text"><em>FLAT BASE</em> が全工程を熟知したプロ集団で解決します</p>
+      <div class="worries-bridge-arrow"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA BAND 1 ===== -->
+<section class="cta-band">
+  <div class="cta-band-bg">
+    <img src="img/web/260128_0010.jpg" alt="" loading="lazy">
+  </div>
+  <div class="container">
+    <p class="cta-band-text">実績十分なスタッフが実務を担当し、<br>PRイベントの成功に導きます</p>
+    <p class="cta-band-sub">ぜひお気軽にご相談ください</p>
+    <div class="cta-buttons">
+      <a href="#contact" class="btn-gold">Contact Us</a>
+      <a href="#flow" class="btn-outline">Flow</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY FLAT BASE ===== -->
+<section class="section-why" id="why">
+  <div class="container">
+    <div class="section-label section-label--muted">Why FLAT BASE</div>
+    <h2 class="why-lead fade-in">
+      なぜフラットベースが<br>PRイベントを成功に導けるのか<br>— 3つの強み
+    </h2>
+    <div class="why-cards">
+      <div class="why-card fade-in" style="position:relative">
+        <div class="why-card-badge">Top Class</div>
+        <img src="https://images.unsplash.com/photo-1761618291331-535983ae4296?w=800&h=600&fit=crop&q=80" alt="PRイベント会場・大規模ステージ" class="why-card-img" loading="lazy">
+        <div class="why-card-body">
+          <div class="why-card-num">01</div>
+          <div class="why-card-title">圧倒的な<br>PRイベント実績</div>
+          <div class="why-card-stat">
+            <div class="why-card-stat-num" data-count="60">0</div>
+            <div class="why-card-stat-unit">件 / 年（年間平均）</div>
+          </div>
+          <div class="why-card-stat-bar"></div>
+          <!-- ミニ棒グラフ（年間実績推移イメージ） -->
+          <div class="stat-mini-bar" style="margin-bottom:16px">
+            <span style="height:40%"></span><span style="height:55%"></span><span style="height:50%"></span>
+            <span style="height:65%"></span><span style="height:60%"></span><span style="height:75%"></span>
+            <span style="height:70%"></span><span style="height:80%"></span><span style="height:85%"></span>
+            <span style="height:90%"></span><span style="height:95%"></span><span style="height:100%"></span>
+          </div>
+          <p class="why-card-desc">
+            PRイベントの成否を左右するのは、企画力だけでなく「実行力」と「現場力」です。FLAT BASEはPR視点を理解したスタッフが、プレス向けPRイベントを数多く手がけてきました。年間約500件のPRイベントが開催される中、年間平均60件のプレス向けPRイベントを担当。PR事業会社としてトップクラスの実績を誇ります。
+          </p>
+        </div>
+      </div>
+      <div class="why-card fade-in" style="position:relative">
+        <div class="why-card-badge">12 Years</div>
+        <img src="img/web/260128_0014.jpg" alt="制作統括・クライアントミーティング" class="why-card-img" loading="lazy">
+        <div class="why-card-body">
+          <div class="why-card-num">02</div>
+          <div class="why-card-title">制作統括者が<br>業界最大手PR会社の<br>イベント事業部で12年</div>
+          <div class="why-card-stat">
+            <div class="why-card-stat-num" data-count="12">0</div>
+            <div class="why-card-stat-unit">年間の業界経験</div>
+          </div>
+          <div class="why-card-stat-bar"></div>
+          <p class="why-card-desc">
+            FLAT BASEの制作統括者は、年間300件のPRイベントを手がける業界最大手のイベント事業部に12年間在籍。管理者としてPR業界に従事してきた経験から、他社では見落とされがちなPR視点の重要要素を的確に設計。この知見をFLAT BASEのすべてのプロジェクトに反映しています。
+          </p>
+        </div>
+      </div>
+      <div class="why-card fade-in" style="position:relative">
+        <div class="why-card-badge">Optimized</div>
+        <img src="https://images.unsplash.com/photo-1766019463451-04e0b1269f37?w=800&h=600&fit=crop&q=80" alt="イベント制作コントロールデスク" class="why-card-img" loading="lazy">
+        <div class="why-card-body">
+          <div class="why-card-num">03</div>
+          <div class="why-card-title">高い<br>コストパフォーマンス</div>
+          <div style="display:flex;align-items:center;gap:16px;margin-bottom:12px">
+            <svg class="cost-down-svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.2" style="opacity:.6"><polyline points="1 6 8.5 10.5 13.5 8.5 23 18"/><polyline points="17 18 23 18 23 12"/></svg>
+            <div>
+              <div style="font-family:var(--font-display);font-size:28px;color:var(--accent);line-height:1">Cost Down</div>
+              <div style="font-family:var(--font-en);font-size:10px;color:var(--gray-mid);letter-spacing:1px">Optimized Network</div>
+            </div>
+          </div>
+          <div class="why-card-stat-bar"></div>
+          <p class="why-card-desc">
+            FLAT BASEは長年の実績から、PRイベントに特化した協力会社ネットワークを構築。造作・テクニカルを含む必要な体制を案件ごとに最適に編成し、大手ベンダーに依存せず無駄のないコスト設計を実現します。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SCENE STRIP ===== -->
+<div class="scene-strip">
+  <div class="scene-strip-photos">
+    <img src="https://images.unsplash.com/photo-1699413326258-07410efc467b?w=800&h=500&fit=crop&q=80" alt="イベント撮影・カメラマン" loading="lazy">
+    <img src="img/web/260128_0027.jpg" alt="イベント風景" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1592912726578-b6ce37953608?w=800&h=500&fit=crop&q=80" alt="イベント撮影・映像制作" loading="lazy">
+  </div>
+  <div class="scene-strip-overlay">
+    <div class="scene-strip-text">
+      <h3>Entrance · Earned · Engagement</h3>
+      <p>PRイベント成功の3つの鍵</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== THREE E ===== -->
+<section class="section-three-e" id="three-e">
+  <div class="container">
+    <div class="section-label section-label--gold">Three E</div>
+    <h2 class="heading-display heading-display--light" style="font-size:clamp(28px,4vw,48px)">PRイベント成功の<br>3つの鍵</h2>
+    <p class="heading-jp heading-jp--light">Entrance · Earned · Engagement</p>
+    <p class="three-e-intro fade-in">
+      PRイベントの成功には、3つの重要な要素があります。
+      <span class="accent-text--light">FLAT BASEは、この3つの「E」を熟知し、最適なバランスで設計・実行します。</span>
+    </p>
+    <div class="three-e-grid">
+      <div class="three-e-card fade-in">
+        <img src="img/web/260128_0026.jpg" alt="FLAT BASE エントランス" class="three-e-card-img" loading="lazy">
+        <div class="three-e-card-body">
+          <div class="three-e-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+          <div class="three-e-num">E — 01</div>
+          <div class="three-e-title">Entrance</div>
+          <div class="three-e-subtitle">入り口設計</div>
+          <p class="three-e-desc">ターゲットメディア・インフルエンサーが「参加したい」と思える企画設計。会場・演出・登壇者のキャスティングを通じて、興味を引く「入り口」を作ります。</p>
+        </div>
+      </div>
+      <div class="three-e-card fade-in">
+        <img src="https://images.unsplash.com/photo-1741236687606-283018081523?w=800&h=600&fit=crop&q=80" alt="映像制作・カメラオペレーター" class="three-e-card-img" loading="lazy">
+        <div class="three-e-card-body">
+          <div class="three-e-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 10h6M9 14h6"/></svg></div>
+          <div class="three-e-num">E — 02</div>
+          <div class="three-e-title">Earned</div>
+          <div class="three-e-subtitle">獲得メディア露出</div>
+          <p class="three-e-desc">PRイベントの最大の目的は「メディア露出の創出」。記事化されやすい演出・フォトスポット・プレスキットの設計により、Earned Mediaを最大化します。</p>
+        </div>
+      </div>
+      <div class="three-e-card fade-in">
+        <img src="img/web/260128_0022.jpg" alt="エンゲージメント・体験設計" class="three-e-card-img" loading="lazy">
+        <div class="three-e-card-body">
+          <div class="three-e-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div>
+          <div class="three-e-num">E — 03</div>
+          <div class="three-e-title">Engagement</div>
+          <div class="three-e-subtitle">エンゲージメント向上</div>
+          <p class="three-e-desc">参加者が「体験したい」「共感したい」と思える空間・演出設計。SNS拡散を促す仕掛けや、記憶に残る体験により、ブランドとのエンゲージメントを深めます。</p>
+        </div>
+      </div>
+    </div>
+    <!-- 3E フロー図解 -->
+    <div class="three-e-diagram fade-in">
+      <div class="three-e-diagram-title">Three E Framework</div>
+      <div class="three-e-flow-visual">
+        <div class="three-e-flow-node">
+          <div class="three-e-flow-node-num">E — 01</div>
+          <div class="three-e-flow-node-title">Entrance</div>
+          <div class="three-e-flow-node-desc">参加意欲を<br>喚起する設計</div>
+        </div>
+        <div class="three-e-flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        <div class="three-e-flow-node">
+          <div class="three-e-flow-node-num">E — 02</div>
+          <div class="three-e-flow-node-title">Earned</div>
+          <div class="three-e-flow-node-desc">メディア露出の<br>最大化</div>
+        </div>
+        <div class="three-e-flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        <div class="three-e-flow-node">
+          <div class="three-e-flow-node-num">E — 03</div>
+          <div class="three-e-flow-node-title">Engagement</div>
+          <div class="three-e-flow-node-desc">ブランド体験の<br>深化</div>
+        </div>
+      </div>
+      <div class="three-e-result">
+        <p class="three-e-result-text"><em>3つのEの相乗効果</em>で、PRイベントの成果を最大化</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SPECIALIST ===== -->
+<section class="section-specialist" id="specialist">
+  <div class="container">
+    <div class="section-label section-label--muted">Specialist</div>
+    <h2 class="heading-display" style="font-size:clamp(24px,3.5vw,40px)">PRイベントのプロ集団</h2>
+    <p class="heading-jp">上流の企画から下流の運営まで、各領域のスペシャリストが在籍</p>
+    <p class="specialist-intro fade-in">
+      単なる制作会社ではなく、PR戦略・メディアリレーション・演出制作・映像・運営のすべてを網羅するスペシャリスト集団。それがFLAT BASEの強みです。
+    </p>
+    <div class="specialist-grid fade-in">
+      <div class="specialist-card specialist-card--photo">
+        <div class="specialist-bg"><img src="img/web/260128_0023.jpg" alt="" loading="lazy"></div>
+        <div class="specialist-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div>
+        <div class="specialist-title">PR Strategy</div>
+        <p class="specialist-desc">PR戦略設計<br>メディアリレーション</p>
+      </div>
+      <div class="specialist-card specialist-card--photo">
+        <div class="specialist-bg"><img src="https://images.unsplash.com/photo-1520433647597-4587e4717558?w=800&h=600&fit=crop&q=80" alt="" loading="lazy"></div>
+        <div class="specialist-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <div class="specialist-title">Production</div>
+        <p class="specialist-desc">演出・造作設計<br>舞台監督・進行管理</p>
+      </div>
+      <div class="specialist-card specialist-card--photo">
+        <div class="specialist-bg"><img src="https://images.unsplash.com/photo-1647098431158-99f713295f0d?w=800&h=600&fit=crop&q=80" alt="" loading="lazy"></div>
+        <div class="specialist-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div>
+        <div class="specialist-title">Video PR</div>
+        <p class="specialist-desc">動画PR制作<br>ビデオリリース配信</p>
+      </div>
+      <div class="specialist-card specialist-card--photo">
+        <div class="specialist-bg"><img src="img/web/260128_0010.jpg" alt="" loading="lazy"></div>
+        <div class="specialist-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+        <div class="specialist-title">Communication</div>
+        <p class="specialist-desc">統合コミュニケーション<br>デジタルマーケティング</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== INLINE CTA ===== -->
+<div class="inline-cta">
+  <p class="inline-cta-text">フラットベースの強みを活かしたPRイベントをご提案します</p>
+  <a href="#contact" class="btn-gold-sm">Contact</a>
+</div>
+
+<!-- ===== TRACK RECORD / 実績紹介 ===== -->
+<section style="padding:100px 0;background:var(--dark);position:relative;overflow:hidden" id="track-record">
+  <!-- 背景画像（半透明イベント写真） -->
+  <div style="position:absolute;inset:0;z-index:0">
+    <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1600&h=900&fit=crop&q=60" alt="" style="width:100%;height:100%;object-fit:cover;opacity:.06" loading="lazy">
+  </div>
+  <div class="container" style="position:relative;z-index:1">
+    <!-- ヘッダー -->
+    <div style="text-align:center;margin-bottom:64px" class="fade-in">
+      <div class="section-label section-label--gold">Track Record</div>
+      <h2 class="heading-en" style="color:var(--off-white);font-size:clamp(24px,3.5vw,40px)">FLAT BASE's<br>Expertise</h2>
+      <p class="heading-jp heading-jp--light">企画から全工程を熟知したプロ集団が対応</p>
+    </div>
+
+    <!-- メイン実績数値 -->
+    <div class="expertise-stats fade-in">
+      <div style="text-align:center;padding:32px 16px;border:1px solid rgba(200,168,110,.2);border-radius:16px;background:rgba(200,168,110,.04)">
+        <div style="font-family:var(--font-en);font-size:clamp(36px,4vw,52px);font-weight:800;color:var(--accent);line-height:1">60<span style="font-size:.5em">+</span></div>
+        <div style="font-family:var(--font-jp);font-size:13px;color:rgba(255,255,255,.5);margin-top:12px;line-height:1.6">年間平均<br><span style="color:var(--accent);font-weight:600">PRイベント制作件数</span></div>
+      </div>
+      <div style="text-align:center;padding:32px 16px;border:1px solid rgba(200,168,110,.2);border-radius:16px;background:rgba(200,168,110,.04)">
+        <div style="font-family:var(--font-en);font-size:clamp(36px,4vw,52px);font-weight:800;color:var(--accent);line-height:1">01-08</div>
+        <div style="font-family:var(--font-jp);font-size:13px;color:rgba(255,255,255,.5);margin-top:12px;line-height:1.6">企画から運営まで<br><span style="color:var(--accent);font-weight:600">全行程を熟知したプロ集団が対応</span></div>
+      </div>
+      <div style="text-align:center;padding:32px 16px;border:1px solid rgba(200,168,110,.2);border-radius:16px;background:rgba(200,168,110,.04)">
+        <div style="font-family:var(--font-en);font-size:clamp(36px,4vw,52px);font-weight:800;color:var(--accent);line-height:1">200<span style="font-size:.5em">+</span></div>
+        <div style="font-family:var(--font-jp);font-size:13px;color:rgba(255,255,255,.5);margin-top:12px;line-height:1.6">チーム累計<br><span style="color:var(--accent);font-weight:600">動画PR案件数</span></div>
+      </div>
+      <div style="text-align:center;padding:32px 16px;border:1px solid rgba(200,168,110,.2);border-radius:16px;background:rgba(200,168,110,.04)">
+        <div style="font-family:var(--font-en);font-size:clamp(36px,4vw,52px);font-weight:800;color:var(--accent);line-height:1">12<span style="font-size:.5em">yrs</span></div>
+        <div style="font-family:var(--font-jp);font-size:13px;color:rgba(255,255,255,.5);margin-top:12px;line-height:1.6">業界最大手PR会社<br><span style="color:var(--accent);font-weight:600">マネジメント経験</span></div>
+      </div>
+    </div>
+
+    <!-- FLAT BASEの3つの強み -->
+    <div class="expertise-strengths fade-in">
+      <!-- 全行程対応力 -->
+      <div style="background:rgba(255,255,255,.03);border:1px solid rgba(200,168,110,.15);border-radius:20px;padding:40px 32px;position:relative;overflow:hidden">
+        <div style="position:absolute;top:16px;right:20px;font-family:var(--font-en);font-size:64px;font-weight:900;color:rgba(200,168,110,.06);line-height:1">F</div>
+        <div style="font-family:var(--font-en);font-size:11px;letter-spacing:2px;color:var(--accent);text-transform:uppercase;margin-bottom:12px">All-in-One Production</div>
+        <div style="font-family:var(--font-jp);font-size:18px;font-weight:700;color:var(--off-white);margin-bottom:20px">FLAT BASEの全行程対応力</div>
+        <div style="display:flex;flex-direction:column;gap:16px">
+          <div style="background:rgba(200,168,110,.08);border-radius:10px;padding:14px 16px;display:flex;align-items:center;gap:12px">
+            <span style="font-family:var(--font-en);font-size:11px;font-weight:700;color:var(--dark);background:var(--accent);padding:4px 10px;border-radius:4px;white-space:nowrap">UNIQUE</span>
+            <span style="font-family:var(--font-jp);font-size:14px;color:rgba(255,255,255,.7)">PR戦略〜制作・運営まで<br><span style="color:var(--accent);font-weight:600">01〜08を熟知したプロ集団</span>が対応</span>
+          </div>
+          <div style="background:rgba(200,168,110,.08);border-radius:10px;padding:14px 16px;display:flex;align-items:center;gap:12px">
+            <span style="font-family:var(--font-en);font-size:11px;font-weight:700;color:var(--dark);background:var(--accent);padding:4px 10px;border-radius:4px;white-space:nowrap">RESULT</span>
+            <span style="font-family:var(--font-jp);font-size:14px;color:rgba(255,255,255,.7)">年間約500件のPRイベント市場で<br><span style="color:var(--accent);font-weight:600">年間平均60件</span>のプレス向けイベントを担当</span>
+          </div>
+          <div style="background:rgba(200,168,110,.08);border-radius:10px;padding:14px 16px;display:flex;align-items:center;gap:12px">
+            <span style="font-family:var(--font-en);font-size:11px;font-weight:700;color:var(--dark);background:var(--accent);padding:4px 10px;border-radius:4px;white-space:nowrap">MERIT</span>
+            <span style="font-family:var(--font-jp);font-size:14px;color:rgba(255,255,255,.7)">窓口統一で<span style="color:var(--accent);font-weight:600">手戻りゼロ</span>・<span style="color:var(--accent);font-weight:600">最適コスト</span>を実現</span>
+          </div>
+        </div>
+        <div style="margin-top:20px;padding-top:16px;border-top:1px solid rgba(200,168,110,.1)">
+          <p style="font-family:var(--font-jp);font-size:13px;color:rgba(255,255,255,.4);line-height:1.8">PR視点を理解したスタッフが制作・運営を担当するため、戦略意図がそのまま現場に反映されます</p>
+        </div>
+      </div>
+      <!-- メンバーの専門性 -->
+      <div style="background:rgba(255,255,255,.03);border:1px solid rgba(200,168,110,.15);border-radius:20px;padding:40px 32px;position:relative;overflow:hidden">
+        <div style="position:absolute;top:16px;right:20px;font-family:var(--font-en);font-size:64px;font-weight:900;color:rgba(200,168,110,.06);line-height:1">B</div>
+        <div style="font-family:var(--font-en);font-size:11px;letter-spacing:2px;color:var(--accent);text-transform:uppercase;margin-bottom:12px">Specialist Team</div>
+        <div style="font-family:var(--font-jp);font-size:18px;font-weight:700;color:var(--off-white);margin-bottom:20px">各領域のスペシャリスト体制</div>
+        <div style="display:flex;flex-direction:column;gap:16px">
+          <div style="background:rgba(200,168,110,.08);border-radius:10px;padding:14px 16px;display:flex;align-items:center;gap:12px">
+            <span style="font-family:var(--font-en);font-size:11px;font-weight:700;color:var(--dark);background:var(--accent);padding:4px 10px;border-radius:4px;white-space:nowrap">PR</span>
+            <span style="font-family:var(--font-jp);font-size:14px;color:rgba(255,255,255,.7)">PR戦略設計 / 執行役員として<br><span style="color:var(--accent);font-weight:600">60名規模のマネジメント経験</span></span>
+          </div>
+          <div style="background:rgba(200,168,110,.08);border-radius:10px;padding:14px 16px;display:flex;align-items:center;gap:12px">
+            <span style="font-family:var(--font-en);font-size:11px;font-weight:700;color:var(--dark);background:var(--accent);padding:4px 10px;border-radius:4px;white-space:nowrap">EVENT</span>
+            <span style="font-family:var(--font-jp);font-size:14px;color:rgba(255,255,255,.7)">舞台監督として<span style="color:var(--accent);font-weight:600">15年以上</span>の<br>イベント企画・演出・制作・運営経験</span>
+          </div>
+          <div style="background:rgba(200,168,110,.08);border-radius:10px;padding:14px 16px;display:flex;align-items:center;gap:12px">
+            <span style="font-family:var(--font-en);font-size:11px;font-weight:700;color:var(--dark);background:var(--accent);padding:4px 10px;border-radius:4px;white-space:nowrap">VIDEO</span>
+            <span style="font-family:var(--font-jp);font-size:14px;color:rgba(255,255,255,.7)">動画PR制作<span style="color:var(--accent);font-weight:600">200案件以上</span> /<br>400本以上のビデオリリース実績</span>
+          </div>
+        </div>
+        <div style="margin-top:20px;padding-top:16px;border-top:1px solid rgba(200,168,110,.1)">
+          <p style="font-family:var(--font-jp);font-size:13px;color:rgba(255,255,255,.4);line-height:1.8">全スタッフがアジアNo.1・世界6位のPRエージェンシー出身。業界トップクラスの知見とネットワークを持つプロ集団です</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 対応可能なイベント種別 -->
+    <div class="fade-in" style="text-align:center">
+      <div style="font-family:var(--font-en);font-size:13px;letter-spacing:3px;color:var(--accent);text-transform:uppercase;margin-bottom:16px">Event Types We Handle</div>
+      <div style="font-family:var(--font-jp);font-size:16px;font-weight:600;color:var(--off-white);margin-bottom:28px">FLAT BASEが手がけるPRイベント</div>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;max-width:900px;margin:0 auto">
+        <span style="border:1px solid rgba(200,168,110,.3);color:rgba(255,255,255,.7);font-size:14px;padding:10px 22px;border-radius:28px;font-family:var(--font-jp)">CM発表会</span>
+        <span style="border:1px solid rgba(200,168,110,.3);color:rgba(255,255,255,.7);font-size:14px;padding:10px 22px;border-radius:28px;font-family:var(--font-jp)">新製品発表会</span>
+        <span style="border:1px solid rgba(200,168,110,.3);color:rgba(255,255,255,.7);font-size:14px;padding:10px 22px;border-radius:28px;font-family:var(--font-jp)">事業戦略発表会</span>
+        <span style="border:1px solid rgba(200,168,110,.3);color:rgba(255,255,255,.7);font-size:14px;padding:10px 22px;border-radius:28px;font-family:var(--font-jp)">記者会見</span>
+        <span style="border:1px solid rgba(200,168,110,.3);color:rgba(255,255,255,.7);font-size:14px;padding:10px 22px;border-radius:28px;font-family:var(--font-jp)">PRイベント</span>
+        <span style="border:1px solid rgba(200,168,110,.3);color:rgba(255,255,255,.7);font-size:14px;padding:10px 22px;border-radius:28px;font-family:var(--font-jp)">インフルエンサーイベント</span>
+        <span style="border:1px solid rgba(200,168,110,.3);color:rgba(255,255,255,.7);font-size:14px;padding:10px 22px;border-radius:28px;font-family:var(--font-jp)">プロモーション</span>
+        <span style="border:1px solid rgba(200,168,110,.3);color:rgba(255,255,255,.7);font-size:14px;padding:10px 22px;border-radius:28px;font-family:var(--font-jp)">SNSキャンペーン</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FLOW ===== -->
+<section class="section-flow" id="flow">
+  <div class="container">
+    <div class="section-label section-label--muted">Flow</div>
+    <h2 class="heading-display" style="font-size:clamp(24px,3.5vw,40px)">How It Works</h2>
+    <p class="heading-jp">ご依頼からイベント実施までの流れ</p>
+    <div class="flow-phases">
+      <div class="fade-in">
+        <div class="flow-phase-label">Before Order / ご発注前</div>
+        <div class="flow-timeline">
+          <div class="flow-step"><div class="flow-dot">1</div><div><div class="flow-title">お問い合わせ</div><div class="flow-desc">お電話・メールフォームにてお気軽にご連絡ください。</div></div></div>
+          <div class="flow-step"><div class="flow-dot">2</div><div><div class="flow-title">ヒアリング</div><div class="flow-desc">実績を元に参考事例をご紹介し、ご状況・課題・ニーズをお伺いします。</div></div></div>
+          <div class="flow-step"><div class="flow-dot">3</div><div><div class="flow-title">ご提案</div><div class="flow-desc">貴社に最適なプランと想定される成果をご提案いたします。</div></div></div>
+        </div>
+      </div>
+      <!-- Phase connector -->
+      <div class="flow-connector fade-in">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      </div>
+      <div class="fade-in">
+        <div class="flow-phase-label">After Order / ご発注後</div>
+        <div class="flow-timeline">
+          <div class="flow-step"><div class="flow-dot">4</div><div><div class="flow-title">事前打ち合わせ</div><div class="flow-desc">目的・ゴールを共有し、全工程を熟知したプロ集団がチームを編成します。</div></div></div>
+          <div class="flow-step"><div class="flow-dot">5</div><div><div class="flow-title">企画・演出設計</div><div class="flow-desc">会場・演出・造作・映像・台本の全体プランを策定。</div></div></div>
+          <div class="flow-step"><div class="flow-dot">6</div><div><div class="flow-title">制作・リハーサル</div><div class="flow-desc">造作・テクニカル制作とリハーサルを実施。</div></div></div>
+          <div class="flow-step"><div class="flow-dot">7</div><div><div class="flow-title">イベント当日運営</div><div class="flow-desc">舞台監督が進行管理・メディア対応を統括。</div></div></div>
+          <div class="flow-step"><div class="flow-dot">8</div><div><div class="flow-title">事後レポート</div><div class="flow-desc">実施結果のレポートと次回施策への振り返り。</div></div></div>
+        </div>
+      </div>
+    </div>
+    <!-- Flow photo strip -->
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-top:48px" class="fade-in">
+      <img src="img/web/260128_0018.jpg" alt="ヒアリング・打ち合わせ" style="width:100%;aspect-ratio:3/2;object-fit:cover" loading="lazy">
+      <img src="img/web/260128_0021.jpg" alt="企画設計・チームミーティング" style="width:100%;aspect-ratio:3/2;object-fit:cover" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1553101497-d1cd9d74660b?w=600&h=400&fit=crop&q=80" alt="イベント会場・ステージ制作" style="width:100%;aspect-ratio:3/2;object-fit:cover" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600&h=400&fit=crop&q=80" alt="当日運営・登壇" style="width:100%;aspect-ratio:3/2;object-fit:cover" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ===== INLINE CTA ===== -->
+<div class="inline-cta" style="background:var(--gray-light)">
+  <p class="inline-cta-text">まずはお問い合わせから。最短1〜2週間でご提案いたします</p>
+  <a href="#contact" class="btn-gold-sm">Free Consultation</a>
+</div>
+
+<!-- ===== FAQ ===== -->
+<section class="section-faq" id="faq">
+  <div class="container">
+    <div class="section-label section-label--muted">FAQ</div>
+    <h2 class="heading-display" style="font-size:clamp(24px,3.5vw,40px)">Frequently Asked<br>Questions</h2>
+    <p class="heading-jp">よくあるご質問</p>
+    <div class="faq-list fade-in">
+      <div class="faq-item"><div class="faq-q">いつからお願いできますか？</div><div class="faq-a">まずはヒアリングからスタートし、ご提案までに1〜2週間程度お時間をいただいております。その後、ご発注いただき次第、担当チームを編成いたします。</div></div>
+      <div class="faq-item"><div class="faq-q">PRイベント以外の業務もお願いできますか？</div><div class="faq-a">はい。PR/コミュニケーションコンサルティング、SNS/インフルエンサーマーケティング、動画PR制作など、コミュニケーション領域全般をワンストップで対応可能です。</div></div>
+      <div class="faq-item"><div class="faq-q">どのような規模のイベントに対応できますか？</div><div class="faq-a">少人数の記者発表会から数百名規模の大型PRイベントまで、幅広い規模に対応しております。案件の規模に応じて、最適なチーム体制と協力会社ネットワークを編成します。</div></div>
+      <div class="faq-item"><div class="faq-q">費用の目安を教えてください。</div><div class="faq-a">イベントの規模・内容により異なります。まずはお問い合わせいただき、ヒアリングの上で最適なプランとお見積りをご提案いたします。PRイベント特化の協力会社ネットワークを活用し、コストパフォーマンスの高い設計をお約束します。</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TEAM ===== -->
+<section class="section-team" id="team">
+  <div class="container">
+    <div class="section-label section-label--muted">Team</div>
+    <h2 class="heading-display" style="font-size:clamp(24px,3.5vw,40px)">Our Members</h2>
+    <p class="heading-jp">実績十分なスタッフが実務を担当</p>
+    <p class="team-intro fade-in">
+      PR戦略・イベント制作・動画PR・統合コミュニケーション — 各領域の経験豊富なスペシャリストが直接担当。
+      全員がアジアNo.1のPRエージェンシー出身。FLAT BASEだからこそ実現できるプロフェッショナルチームです。
+    </p>
+    <div class="team-grid">
+      <div class="team-card fade-in">
+        <div class="team-avatar"><img src="img/kaneko.jpg" alt="金子 大羅" loading="lazy"></div>
+        <div>
+          <div class="team-name">金子 大羅</div>
+          <div class="team-name-en">Taira Kaneko</div>
+          <div class="team-role">代表取締役 / PR戦略統括</div>
+          <div class="team-specialty">PR Strategy / Media Relations</div>
+          <p class="team-bio">ベクトルグループ(株)プラチナムに約12年間在籍。PR/コミュニケーション戦略設計から実装ディレクションまで幅広く実施。執行役員として約60名のマネジメントも経験。</p>
+        </div>
+      </div>
+      <div class="team-card fade-in">
+        <div class="team-avatar"><img src="img/kawakami.jpg" alt="川上 雄三" loading="lazy"></div>
+        <div>
+          <div class="team-name">川上 雄三</div>
+          <div class="team-name-en">Yuzo Kawakami</div>
+          <div class="team-role">取締役 / イベント・プロモーション統括</div>
+          <div class="team-specialty">Event Production / Stage Direction</div>
+          <p class="team-bio">プロモーション系制作会社で企画・進行・運営を5年間経験後、ベクトルグループ内イベントプロモーション事業部に約10年間在籍。舞台監督として多数のイベントを成功に導く。</p>
+        </div>
+      </div>
+      <div class="team-card fade-in">
+        <div class="team-avatar"><img src="img/ogawa.jpg" alt="小川 匠" loading="lazy"></div>
+        <div>
+          <div class="team-name">小川 匠</div>
+          <div class="team-name-en">Takumi Ogawa</div>
+          <div class="team-role">執行役員兼プロデューサー / 動画PR統括</div>
+          <div class="team-specialty">Video PR / Content Production</div>
+          <p class="team-bio">ベクトルグループ(株)NewsTVにて約7年間、動画制作〜ビデオリリース配信の動画PR業務に従事。計200案件以上、400本以上の動画PR案件を経験。</p>
+        </div>
+      </div>
+      <div class="team-card fade-in">
+        <div class="team-avatar"><img src="img/ukawa.jpg" alt="鵜川 くるみ" loading="lazy"></div>
+        <div>
+          <div class="team-name">鵜川 くるみ</div>
+          <div class="team-name-en">Kurumi Ukawa</div>
+          <div class="team-role">コミュニケーションプランナー</div>
+          <div class="team-specialty">Integrated Communication</div>
+          <p class="team-bio">(株)プラチナムにてビジネスメディアを得意領域としてプロモーター、マネージャー、PMを経験。PR領域に捕らわれない統合コミュニケーション設計を得意とする。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA BAND 2 ===== -->
+<section class="cta-band">
+  <div class="cta-band-bg">
+    <img src="https://images.unsplash.com/photo-1603567849175-b823a9514787?w=1600&h=900&fit=crop&q=80" alt="" loading="lazy">
+  </div>
+  <div class="container">
+    <p class="cta-band-text">PRイベントのご相談は、お気軽にお問い合わせください</p>
+    <p class="cta-band-sub">経験豊富なスタッフが、貴社に最適なプランをご提案いたします</p>
+    <div class="cta-buttons">
+      <a href="#contact" class="btn-gold">Contact Us</a>
+      <a href="#team" class="btn-outline">Team</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== COMPANY ===== -->
+<section class="section-company" id="company">
+  <div class="container">
+    <div class="section-label section-label--muted">Company</div>
+    <h2 class="heading-display" style="font-size:clamp(24px,3.5vw,40px)">Company Info</h2>
+    <div class="company-layout fade-in">
+      <div>
+        <div class="company-row"><div class="company-label">会社名</div><div class="company-value">株式会社フラットベース / FLAT BASE inc.</div></div>
+        <div class="company-row"><div class="company-label">設立</div><div class="company-value">2022年2月1日</div></div>
+        <div class="company-row"><div class="company-label">代表取締役</div><div class="company-value">金子 大羅</div></div>
+        <div class="company-row"><div class="company-label">所在地</div><div class="company-value">東京都世田谷区用賀4-3-15 UTビルディング4F</div></div>
+        <div class="company-row"><div class="company-label">事業内容</div><div class="company-value">PR/コミュニケーションコンサルティング<br>イベント/プロモーション<br>SNS/インフルエンサー/デジタルマーケティング<br>D2C事業</div></div>
+      </div>
+      <div class="company-photos">
+        <img src="img/web/260128_0035.jpg" alt="FLAT BASE外観サイン" class="company-photo" style="aspect-ratio:4/3" loading="lazy">
+        <img src="img/web/260128_0029.jpg" alt="FLAT BASEエントランス" class="company-photo" style="aspect-ratio:4/3" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="section-contact" id="contact" style="position:relative;overflow:hidden">
+  <div class="geo-pattern geo-pattern--dots" style="top:40px;right:40px;width:200px;height:200px;opacity:.02"></div>
+  <div class="container">
+    <div class="contact-grid">
+      <div class="fade-in">
+        <div class="section-label section-label--gold">Contact</div>
+        <h2 class="heading-display heading-display--light" style="font-size:clamp(28px,4vw,48px)">Contact</h2>
+        <p class="heading-jp heading-jp--light">お問い合わせ</p>
+        <p class="contact-lead">PRイベントの企画・制作に関するご相談は、お気軽にお問い合わせください。実績十分なスタッフが、貴社のPRイベント成功に向けて最適なご提案をいたします。</p>
+        <div class="contact-info-item">
+          <div class="contact-info-label">Address</div>
+          <div class="contact-info-value">東京都世田谷区用賀4-3-15 UTビルディング4F</div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-label">Website</div>
+          <div class="contact-info-value">https://flat-base.jp/</div>
+        </div>
+      </div>
+      <div class="fade-in">
+        <form class="contact-form" id="contactForm">
+          <div class="form-group"><label class="form-label" for="cf-name">お名前 <span class="form-req">*</span></label><input type="text" id="cf-name" name="name" class="form-input" placeholder="山田 太郎" required></div>
+          <div class="form-group"><label class="form-label" for="cf-company">会社名 <span class="form-req">*</span></label><input type="text" id="cf-company" name="company" class="form-input" placeholder="株式会社○○" required></div>
+          <div class="form-group"><label class="form-label" for="cf-email">メールアドレス <span class="form-req">*</span></label><input type="email" id="cf-email" name="email" class="form-input" placeholder="example@company.co.jp" required></div>
+          <div class="form-group"><label class="form-label" for="cf-tel">電話番号</label><input type="tel" id="cf-tel" name="phone" class="form-input" placeholder="000-0000-0000"></div>
+          <div class="form-group"><label class="form-label" for="cf-message">お問い合わせ内容 <span class="form-req">*</span></label><textarea id="cf-message" name="message" class="form-textarea" placeholder="PRイベントに関するご相談内容をお書きください" required></textarea></div>
+          <button type="submit" class="form-submit">Send Message</button>
+          <p class="form-success" id="formSuccess" style="display:none;font-family:var(--font-jp);font-size:14px;color:var(--accent);margin-top:12px">お問い合わせを受け付けました。ありがとうございます。</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="footer">
+  <div class="footer-logo"><img src="img/fb_logo-w.svg" alt="FLAT BASE" class="footer-logo-img"></div>
+  <div class="footer-copy">&copy; FlatBase, Inc. All rights reserved.</div>
+  </footer>
+
+<script>
+// Header scroll
+const header=document.getElementById('header');
+if(header)window.addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>60),{passive:true});
+
+// Fade-in with stagger
+const fadeObs=new IntersectionObserver((entries)=>{
+  entries.forEach((entry,i)=>{
+    if(entry.isIntersecting){
+      setTimeout(()=>entry.target.classList.add('visible'),i*80);
+      fadeObs.unobserve(entry.target);
+    }
+  });
+},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.fade-in').forEach(el=>fadeObs.observe(el));
+
+// Counter animation
+const counterObs=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){
+    const el=e.target;
+    const target=parseInt(el.dataset.count,10);
+    if(!target)return;
+    const suffix=el.querySelector('span');
+    const suffixText=suffix?suffix.textContent:'';
+    const duration=1800;
+    const start=performance.now();
+    const step=(now)=>{
+      const progress=Math.min((now-start)/duration,1);
+      const eased=1-Math.pow(1-progress,3);
+      const current=Math.round(eased*target);
+      el.textContent=current;
+      if(suffix){const s=document.createElement('span');s.textContent=suffixText;el.appendChild(s)}
+      if(progress<1)requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+    counterObs.unobserve(el);
+  }
+}),{threshold:.5});
+document.querySelectorAll('[data-count]').forEach(el=>counterObs.observe(el));
+
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(q=>{
+  q.addEventListener('click',()=>{
+    q.classList.toggle('open');
+    const a=q.nextElementSibling;
+    if(a)a.classList.toggle('open');
+  });
+});
+
+// Animate Cost Down SVG arrows on scroll
+const costDownObs=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){
+    e.target.classList.add('animated');
+    costDownObs.unobserve(e.target);
+  }
+}),{threshold:.5});
+document.querySelectorAll('.cost-down-svg').forEach(el=>costDownObs.observe(el));
+
+// Animate mini stat bars on scroll
+const barObs=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){
+    e.target.querySelectorAll('span').forEach((s,i)=>{
+      setTimeout(()=>{s.style.transition='height .6s cubic-bezier(.22,.61,.36,1)'},i*60);
+    });
+    barObs.unobserve(e.target);
+  }
+}),{threshold:.5});
+document.querySelectorAll('.stat-mini-bar').forEach(el=>barObs.observe(el));
+
+// Contact form
+const cf=document.getElementById('contactForm');
+if(cf)cf.addEventListener('submit',e=>{
+  e.preventDefault();
+  const ok=document.getElementById('formSuccess');
+  if(ok)ok.style.display='block';
+  cf.reset();
+});
+</script>
+</body>
+</html>
