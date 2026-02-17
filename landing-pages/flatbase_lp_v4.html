@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PRイベント全行程対応 | 企画から運営まで | FLAT BASE inc.</title>
-<meta name="description" content="PR戦略から制作・運営まで、01〜08すべての工程をワンストップで対応。PRイベント制作に特化した専門チーム。年間平均60件の実績。FLAT BASE inc.">
+<meta name="description" content="PR戦略から制作・運営まで、01〜08すべての工程を熟知したプロ集団が対応。PRイベント制作に特化した専門チーム。年間平均60件の実績。FLAT BASE inc.">
 <meta property="og:title" content="PRイベント全行程対応 | FLAT BASE inc.">
-<meta property="og:description" content="PR戦略から制作・運営まで、01〜08すべての工程をワンストップで対応。PRイベント制作に特化した専門チーム。">
+<meta property="og:description" content="PR戦略から制作・運営まで、01〜08すべての工程を熟知したプロ集団が対応。PRイベント制作に特化した専門チーム。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://flat-base.jp/">
 <meta name="twitter:card" content="summary_large_image">
@@ -84,10 +84,14 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 .btn-secondary{font-family:var(--font-en);font-size:11px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.7);padding:16px 48px;border:1px solid rgba(255,255,255,.15);transition:all .4s cubic-bezier(.22,.61,.36,1);display:inline-block}
 .btn-secondary:hover{border-color:rgba(255,255,255,.5);color:var(--white);transform:translateY(-2px)}
 .hero-stats{display:flex;gap:64px;padding-top:48px;border-top:1px solid rgba(255,255,255,.06)}
-.hero-stat-num{font-family:var(--font-display);font-size:clamp(48px,6vw,72px);font-weight:600;color:var(--accent);line-height:1;display:inline-block}
+.hero-stat-num{font-family:var(--font-display);font-size:clamp(48px,6vw,72px);font-weight:600;color:var(--accent);line-height:1;display:inline-flex;align-items:baseline;min-height:clamp(48px,6vw,72px)}
 .hero-stat-num span{font-family:var(--font-en);font-size:.3em;font-weight:400;margin-left:4px;vertical-align:super;letter-spacing:1px}
 .hero-stat-label{font-family:var(--font-jp);font-size:11px;font-weight:400;color:rgba(255,255,255,.55);letter-spacing:.06em;margin-top:12px}
 .hero-stat-bar{width:32px;height:1px;background:rgba(200,168,110,.4);margin-top:10px}
+/* Cost Down arrow animation */
+.cost-down-svg polyline{stroke-dasharray:80;stroke-dashoffset:80;transition:none}
+.cost-down-svg.animated polyline{stroke-dashoffset:0;transition:stroke-dashoffset 1.5s cubic-bezier(.22,.61,.36,1)}
+.cost-down-svg.animated polyline:nth-child(2){transition-delay:.8s}
 .hero-scroll{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;z-index:2}
 .hero-scroll span{font-family:var(--font-en);font-size:9px;letter-spacing:4px;color:rgba(255,255,255,.2);text-transform:uppercase}
 .hero-scroll-line{width:1px;height:40px;background:linear-gradient(180deg,rgba(255,255,255,.2),transparent);animation:scrollPulse 2.5s ease infinite}
@@ -196,6 +200,8 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 .btn-outline:hover{border-color:rgba(255,255,255,.5);color:var(--white);transform:translateY(-2px)}
 
 /* ===== WHY FLAT BASE ===== */
+.expertise-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-bottom:72px}
+.expertise-strengths{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-bottom:72px}
 .section-why{padding:var(--section-py) 0;background:var(--off-white)}
 .why-lead{font-family:var(--font-jp);font-size:clamp(18px,2.2vw,26px);font-weight:300;line-height:1.9;letter-spacing:.06em;max-width:680px;margin-bottom:80px}
 .why-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
@@ -452,6 +458,8 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
   .why-card-stat-num{font-size:48px}
   .company-layout{grid-template-columns:1fr}
   .photo-gallery-grid{grid-template-columns:1fr 1fr}
+  .expertise-stats{grid-template-columns:repeat(2,1fr) !important}
+  .expertise-strengths{grid-template-columns:1fr !important}
 }
 </style>
 </head>
@@ -481,9 +489,9 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
   <div class="hero-accent-line"></div>
   <div class="hero-inner">
     <p class="hero-eyecatch">FLAT BASE inc.</p>
-    <h1 class="hero-title">Full Support,<br><em>Planning & Execution.</em></h1>
+    <h1 class="hero-title">THE ONLY ONES WITH<br><em>THE SECRET TO PR SUCCESS.</em></h1>
     <p style="font-family:var(--font-jp);font-size:clamp(15px,1.6vw,18px);font-weight:400;color:var(--white);letter-spacing:.08em;line-height:2;margin-bottom:40px;max-width:600px">
-      PRイベントを成功させるための秘訣を持つ、<br>業界唯一の制作会社。<br>企画から実行まで、すべての工程を網羅。
+      PRイベントを成功させるための秘訣を持つ、<br>業界唯一の制作会社。<br>企画から運営まで、すべてを熟知したプロ集団。
     </p>
     <div class="hero-ctas">
       <a href="#contact" class="btn-primary">Contact Us</a>
@@ -501,7 +509,10 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
         <div class="hero-stat-bar"></div>
       </div>
       <div class="hero-stat">
-        <div class="hero-stat-num" style="font-size:clamp(24px,3.5vw,40px)"><span style="font-size:inherit;color:var(--accent)">Cost<br>Down</span></div>
+        <div class="hero-stat-num" style="display:flex;align-items:center;gap:8px">
+          <svg class="cost-down-svg" width="clamp(32px,4vw,48px)" height="clamp(32px,4vw,48px)" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" style="flex-shrink:0"><polyline points="1 6 8.5 10.5 13.5 8.5 23 18"/><polyline points="17 18 23 18 23 12"/></svg>
+          <span style="font-size:clamp(28px,3.5vw,42px);vertical-align:baseline;margin-left:0">Cost Down</span>
+        </div>
         <div class="hero-stat-label">高いコストパフォーマンス</div>
         <div class="hero-stat-bar"></div>
       </div>
@@ -548,10 +559,10 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
   <div class="container">
     <div class="section-label section-label--gold">Full Support</div>
     <h2 class="heading-en" style="color:var(--off-white)">Full Support :<br>Planning to Execution</h2>
-    <p class="heading-jp heading-jp--light">企画から運営まで、01〜08 すべてをワンストップで対応</p>
+    <p class="heading-jp heading-jp--light">企画から運営まで、01〜08を熟知したプロ集団が対応</p>
     <p class="process-intro">
       PRイベントは、戦略設計から当日運営まで、多くの専門領域が連携して成り立ちます。
-      <span class="accent-text--light">FLAT BASEは、上流の企画・戦略から下流の制作・運営まで、すべての工程をワンストップで対応できる、PRイベント制作の専門チームです。</span>
+      <span class="accent-text--light">目的設計やメディア選定などの上流工程（01〜05）は主に広告代理店・PR会社の領域ですが、FLAT BASEはこれらを含む全8工程を熟知したプロ集団が一貫対応します。</span>
     </p>
 
     <div class="process-visual">
@@ -625,7 +636,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
       </div>
       <p class="process-onestop-text">
-        <strong>FLAT BASEは、PR戦略から制作・運営まで、すべての工程を理解した「PRイベントのプロ集団」です。</strong><br>
+        <strong>FLAT BASEは、01〜08すべての工程を熟知した「PRイベントのプロ集団」です。</strong><br>
         各領域のスペシャリストが直接サポートし、イベント全体の成功をリードします。
       </p>
     </div>
@@ -681,7 +692,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
       </div>
     </div>
     <div class="worries-bridge fade-in">
-      <p class="worries-bridge-text"><em>FLAT BASE</em> がすべてワンストップで解決します</p>
+      <p class="worries-bridge-text"><em>FLAT BASE</em> が全工程を熟知したプロ集団で解決します</p>
       <div class="worries-bridge-arrow"></div>
     </div>
   </div>
@@ -756,7 +767,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
           <div class="why-card-num">03</div>
           <div class="why-card-title">高い<br>コストパフォーマンス</div>
           <div style="display:flex;align-items:center;gap:16px;margin-bottom:12px">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.2" style="opacity:.6"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+            <svg class="cost-down-svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.2" style="opacity:.6"><polyline points="1 6 8.5 10.5 13.5 8.5 23 18"/><polyline points="17 18 23 18 23 12"/></svg>
             <div>
               <div style="font-family:var(--font-display);font-size:28px;color:var(--accent);line-height:1">Cost Down</div>
               <div style="font-family:var(--font-en);font-size:10px;color:var(--gray-mid);letter-spacing:1px">Optimized Network</div>
@@ -913,18 +924,18 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
     <div style="text-align:center;margin-bottom:64px" class="fade-in">
       <div class="section-label section-label--gold">Track Record</div>
       <h2 class="heading-en" style="color:var(--off-white);font-size:clamp(24px,3.5vw,40px)">FLAT BASE's<br>Expertise</h2>
-      <p class="heading-jp heading-jp--light">FLAT BASEの実績と専門性</p>
+      <p class="heading-jp heading-jp--light">企画から全工程を熟知したプロ集団が対応</p>
     </div>
 
     <!-- メイン実績数値 -->
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-bottom:72px" class="fade-in">
+    <div class="expertise-stats fade-in">
       <div style="text-align:center;padding:32px 16px;border:1px solid rgba(200,168,110,.2);border-radius:16px;background:rgba(200,168,110,.04)">
         <div style="font-family:var(--font-en);font-size:clamp(36px,4vw,52px);font-weight:800;color:var(--accent);line-height:1">60<span style="font-size:.5em">+</span></div>
         <div style="font-family:var(--font-jp);font-size:13px;color:rgba(255,255,255,.5);margin-top:12px;line-height:1.6">年間平均<br><span style="color:var(--accent);font-weight:600">PRイベント制作件数</span></div>
       </div>
       <div style="text-align:center;padding:32px 16px;border:1px solid rgba(200,168,110,.2);border-radius:16px;background:rgba(200,168,110,.04)">
         <div style="font-family:var(--font-en);font-size:clamp(36px,4vw,52px);font-weight:800;color:var(--accent);line-height:1">01-08</div>
-        <div style="font-family:var(--font-jp);font-size:13px;color:rgba(255,255,255,.5);margin-top:12px;line-height:1.6">企画から運営まで<br><span style="color:var(--accent);font-weight:600">全行程ワンストップ対応</span></div>
+        <div style="font-family:var(--font-jp);font-size:13px;color:rgba(255,255,255,.5);margin-top:12px;line-height:1.6">企画から運営まで<br><span style="color:var(--accent);font-weight:600">全行程を熟知したプロ集団が対応</span></div>
       </div>
       <div style="text-align:center;padding:32px 16px;border:1px solid rgba(200,168,110,.2);border-radius:16px;background:rgba(200,168,110,.04)">
         <div style="font-family:var(--font-en);font-size:clamp(36px,4vw,52px);font-weight:800;color:var(--accent);line-height:1">200<span style="font-size:.5em">+</span></div>
@@ -937,7 +948,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
     </div>
 
     <!-- FLAT BASEの3つの強み -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-bottom:72px" class="fade-in">
+    <div class="expertise-strengths fade-in">
       <!-- 全行程対応力 -->
       <div style="background:rgba(255,255,255,.03);border:1px solid rgba(200,168,110,.15);border-radius:20px;padding:40px 32px;position:relative;overflow:hidden">
         <div style="position:absolute;top:16px;right:20px;font-family:var(--font-en);font-size:64px;font-weight:900;color:rgba(200,168,110,.06);line-height:1">F</div>
@@ -946,7 +957,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
         <div style="display:flex;flex-direction:column;gap:16px">
           <div style="background:rgba(200,168,110,.08);border-radius:10px;padding:14px 16px;display:flex;align-items:center;gap:12px">
             <span style="font-family:var(--font-en);font-size:11px;font-weight:700;color:var(--dark);background:var(--accent);padding:4px 10px;border-radius:4px;white-space:nowrap">UNIQUE</span>
-            <span style="font-family:var(--font-jp);font-size:14px;color:rgba(255,255,255,.7)">PR戦略〜制作・運営まで<br><span style="color:var(--accent);font-weight:600">01〜08全工程をワンチーム</span>で対応</span>
+            <span style="font-family:var(--font-jp);font-size:14px;color:rgba(255,255,255,.7)">PR戦略〜制作・運営まで<br><span style="color:var(--accent);font-weight:600">01〜08を熟知したプロ集団</span>が対応</span>
           </div>
           <div style="background:rgba(200,168,110,.08);border-radius:10px;padding:14px 16px;display:flex;align-items:center;gap:12px">
             <span style="font-family:var(--font-en);font-size:11px;font-weight:700;color:var(--dark);background:var(--accent);padding:4px 10px;border-radius:4px;white-space:nowrap">RESULT</span>
@@ -1026,7 +1037,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
       <div class="fade-in">
         <div class="flow-phase-label">After Order / ご発注後</div>
         <div class="flow-timeline">
-          <div class="flow-step"><div class="flow-dot">4</div><div><div class="flow-title">事前打ち合わせ</div><div class="flow-desc">目的・ゴールを共有し、ワンチームとなります。</div></div></div>
+          <div class="flow-step"><div class="flow-dot">4</div><div><div class="flow-title">事前打ち合わせ</div><div class="flow-desc">目的・ゴールを共有し、全工程を熟知したプロ集団がチームを編成します。</div></div></div>
           <div class="flow-step"><div class="flow-dot">5</div><div><div class="flow-title">企画・演出設計</div><div class="flow-desc">会場・演出・造作・映像・台本の全体プランを策定。</div></div></div>
           <div class="flow-step"><div class="flow-dot">6</div><div><div class="flow-title">制作・リハーサル</div><div class="flow-desc">造作・テクニカル制作とリハーサルを実施。</div></div></div>
           <div class="flow-step"><div class="flow-dot">7</div><div><div class="flow-title">イベント当日運営</div><div class="flow-desc">舞台監督が進行管理・メディア対応を統括。</div></div></div>
@@ -1163,7 +1174,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
     <div class="contact-grid">
       <div class="fade-in">
         <div class="section-label section-label--gold">Contact</div>
-        <h2 class="heading-display heading-display--light" style="font-size:clamp(28px,4vw,48px)">Get in Touch</h2>
+        <h2 class="heading-display heading-display--light" style="font-size:clamp(28px,4vw,48px)">Contact</h2>
         <p class="heading-jp heading-jp--light">お問い合わせ</p>
         <p class="contact-lead">PRイベントの企画・制作に関するご相談は、お気軽にお問い合わせください。実績十分なスタッフが、貴社のPRイベント成功に向けて最適なご提案をいたします。</p>
         <div class="contact-info-item">
@@ -1244,6 +1255,15 @@ document.querySelectorAll('.faq-q').forEach(q=>{
     if(a)a.classList.toggle('open');
   });
 });
+
+// Animate Cost Down SVG arrows on scroll
+const costDownObs=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){
+    e.target.classList.add('animated');
+    costDownObs.unobserve(e.target);
+  }
+}),{threshold:.5});
+document.querySelectorAll('.cost-down-svg').forEach(el=>costDownObs.observe(el));
 
 // Animate mini stat bars on scroll
 const barObs=new IntersectionObserver(es=>es.forEach(e=>{
