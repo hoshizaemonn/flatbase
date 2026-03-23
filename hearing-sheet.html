@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LP修正ヒアリングシート — FLAT BASE</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Sans JP','Hiragino Sans',sans-serif;background:#f7f6f4;color:#1a1a1a;line-height:1.8}
+.container{max-width:720px;margin:0 auto;padding:40px 24px 80px}
+
+/* ヘッダー */
+.header{text-align:center;margin-bottom:48px}
+.header h1{font-size:20px;font-weight:700;letter-spacing:.08em;margin-bottom:8px}
+.header p{font-size:13px;color:#888}
+.header .note{background:#fff;border-radius:10px;padding:16px 24px;margin-top:20px;font-size:13px;color:#555;line-height:1.8;text-align:left;border:1px solid #e8e6e3}
+.header .note strong{color:#1a1a1a}
+
+/* セクション */
+.section{background:#fff;border-radius:14px;padding:28px 32px;margin-bottom:20px;box-shadow:0 1px 4px rgba(0,0,0,.04)}
+.section-num{font-size:11px;font-weight:700;color:#c8a86e;letter-spacing:.1em;margin-bottom:4px}
+.section h2{font-size:16px;font-weight:700;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid #eee}
+
+/* 選択肢 */
+.options{display:flex;flex-direction:column;gap:10px}
+.option{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;border-radius:10px;border:2px solid #e8e6e3;cursor:pointer;transition:all .2s}
+.option:hover{border-color:#c8a86e;background:#fdfcfa}
+.option.selected{border-color:#c8a86e;background:#faf6ef}
+.option input[type="radio"],.option input[type="checkbox"]{margin-top:3px;accent-color:#c8a86e;flex-shrink:0}
+.option-content{flex:1}
+.option-label{font-size:14px;font-weight:600;margin-bottom:2px}
+.option-desc{font-size:12px;color:#888;line-height:1.6}
+
+/* テキストエリア */
+.free-text{width:100%;border:2px solid #e8e6e3;border-radius:10px;padding:14px 16px;font-family:inherit;font-size:13px;line-height:1.7;resize:vertical;min-height:80px;transition:border-color .2s}
+.free-text:focus{outline:none;border-color:#c8a86e}
+.free-text::placeholder{color:#ccc}
+
+/* LP参照リンク */
+.lp-link{display:flex;align-items:center;gap:12px;background:#1a1a1a;color:#fff;border-radius:10px;padding:16px 24px;margin-bottom:24px;text-decoration:none;transition:opacity .2s}
+.lp-link:hover{opacity:.85}
+.lp-link .icon{font-size:20px}
+.lp-link .text{flex:1}
+.lp-link .text .label{font-size:11px;color:#888;margin-bottom:2px}
+.lp-link .text .url{font-size:13px;font-weight:500}
+.lp-link .arrow{font-size:14px;color:#c8a86e}
+
+/* セクション構成図 */
+.structure{display:flex;flex-direction:column;gap:0;margin:16px 0}
+.struct-item{display:flex;align-items:center;gap:12px;padding:8px 14px;border-radius:8px;font-size:13px;position:relative}
+.struct-item:not(:last-child)::after{content:'↓';position:absolute;bottom:-10px;left:24px;font-size:10px;color:#ccc}
+.struct-num{width:24px;height:24px;border-radius:6px;background:#f0f0f0;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#888;flex-shrink:0}
+.struct-name{font-weight:600;flex-shrink:0;min-width:100px}
+.struct-desc{font-size:11px;color:#888}
+.struct-item.highlight{background:#faf6ef}
+.struct-item.highlight .struct-num{background:#c8a86e;color:#fff}
+
+/* 補足 */
+.hint{font-size:12px;color:#aaa;margin-top:8px;padding-left:4px}
+
+/* 保存ボタン */
+.save-area{text-align:center;margin-top:40px}
+.save-btn{display:inline-flex;align-items:center;gap:10px;background:#c8a86e;color:#fff;border:none;border-radius:12px;padding:16px 48px;font-family:inherit;font-size:15px;font-weight:700;letter-spacing:.06em;cursor:pointer;transition:all .2s;box-shadow:0 4px 16px rgba(200,168,110,.3)}
+.save-btn:hover{background:#b8964e;transform:translateY(-1px);box-shadow:0 6px 24px rgba(200,168,110,.4)}
+.save-btn:active{transform:translateY(0)}
+.save-btn svg{flex-shrink:0}
+.save-msg{font-size:13px;color:#2e7d32;margin-top:12px;opacity:0;transition:opacity .3s}
+.save-msg.show{opacity:1}
+.save-note{font-size:12px;color:#aaa;margin-top:16px;line-height:1.7}
+
+@media(max-width:600px){
+  .container{padding:24px 16px 60px}
+  .section{padding:20px 20px}
+  .struct-desc{display:none}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <h1>LP修正 ヒアリングシート</h1>
+    <p>FLAT BASE inc. 様</p>
+    <div class="note">
+      現在のLPについて、修正の方向性をお聞かせください。<br>
+      <strong>各項目で一番近いものを選ぶだけ</strong>でOKです（所要時間：約5分）。<br>
+      いただいた回答をもとに、こちらで修正を進めます。
+    </div>
+  </div>
+
+  <!-- LP参照リンク -->
+  <a class="lp-link" href="https://hoshizaemonn.github.io/flatbase/flatbase_lp_v5.html" target="_blank">
+    <div class="icon">🔗</div>
+    <div class="text">
+      <div class="label">現在のLP（確認用）</div>
+      <div class="url">flatbase_lp_v5.html</div>
+    </div>
+    <div class="arrow">→</div>
+  </a>
+
+  <!-- Q1: 全体の印象 -->
+  <div class="section">
+    <div class="section-num">QUESTION 01</div>
+    <h2>全体の印象・トーン</h2>
+    <div class="options">
+      <label class="option">
+        <input type="radio" name="q1" value="ok">
+        <div class="option-content">
+          <div class="option-label">このままでOK</div>
+          <div class="option-desc">全体のトーン&マナーは問題ない</div>
+        </div>
+      </label>
+      <label class="option">
+        <input type="radio" name="q1" value="simpler">
+        <div class="option-content">
+          <div class="option-label">もっとシンプルにしたい</div>
+          <div class="option-desc">情報量を減らして、すっきり見せたい</div>
+        </div>
+      </label>
+      <label class="option">
+        <input type="radio" name="q1" value="premium">
+        <div class="option-content">
+          <div class="option-label">もっと高級感・重厚感がほしい</div>
+          <div class="option-desc">大手PR会社としての格をもっと出したい</div>
+        </div>
+      </label>
+      <label class="option">
+        <input type="radio" name="q1" value="friendly">
+        <div class="option-content">
+          <div class="option-label">もっと親しみやすくしたい</div>
+          <div class="option-desc">敷居を下げて、気軽に問い合わせてもらいたい</div>
+        </div>
+      </label>
+      <label class="option">
+        <input type="radio" name="q1" value="different">
+        <div class="option-content">
+          <div class="option-label">方向性が違う</div>
+          <div class="option-desc">下の自由記述にイメージを書いていただければ調整します</div>
+        </div>
+      </label>
+    </div>
+    <p class="hint">補足があれば ↓</p>
+    <textarea class="free-text" placeholder="例：もう少しコーポレートサイトに寄せたい、など"></textarea>
+  </div>
+
+  <!-- Q2: ファーストビュー -->
+  <div class="section">
+    <div class="section-num">QUESTION 02</div>
+    <h2>ファーストビュー（最初に目に入る部分）</h2>
+    <div class="options">
+      <label class="option">
+        <input type="radio" name="q2" value="ok">
+        <div class="option-content">
+          <div class="option-label">このままでOK</div>
+        </div>
+      </label>
+      <label class="option">
+        <input type="radio" name="q2" value="photo">
+        <div class="option-content">
+          <div class="option-label">写真を変えたい</div>
+          <div class="option-desc">実際のイベント写真に差し替えたい / もっとインパクトのある写真にしたい</div>
+        </div>
+      </label>
+      <label class="option">
+        <input type="radio" name="q2" value="copy">
+        <div class="option-content">
+          <div class="option-label">キャッチコピーを変えたい</div>
+          <div class="option-desc">現在：「PRイベントの全工程を、ひとつのチームで。」</div>
+        </div>
+      </label>
+      <label class="option">
+        <input type="radio" name="q2" value="both">
+        <div class="option-content">
+          <div class="option-label">写真もコピーも変えたい</div>
+        </div>
+      </label>
+    </div>
+    <textarea class="free-text" placeholder="差し替えたい写真やコピーのイメージがあれば"></textarea>
+  </div>
+
+  <!-- Q3: セクション構成 -->
+  <div class="section">
+    <div class="section-num">QUESTION 03</div>
+    <h2>セクション構成</h2>
+    <p style="font-size:13px;color:#666;margin-bottom:16px">現在の構成です。不要なセクション・追加したいセクションはありますか？</p>
+
+    <div class="structure">
+      <div class="struct-item highlight">
+        <div class="struct-num">1</div>
+        <div class="struct-name">Hero</div>
+        <div class="struct-desc">キービジュアル + 実績数値 + CTA</div>
+      </div>
+      <div class="struct-item">
+        <div class="struct-num">2</div>
+        <div class="struct-name">About</div>
+        <div class="struct-desc">PRイベントとは</div>
+      </div>
+      <div class="struct-item">
+        <div class="struct-num">3</div>
+        <div class="struct-name">Full Support</div>
+        <div class="struct-desc">企画から運営まで — PRイベントの8要素</div>
+      </div>
+      <div class="struct-item">
+        <div class="struct-num">4</div>
+        <div class="struct-name">Worries</div>
+        <div class="struct-desc">こんなお悩みありませんか？</div>
+      </div>
+      <div class="struct-item highlight">
+        <div class="struct-num">5</div>
+        <div class="struct-name">Why FLAT BASE</div>
+        <div class="struct-desc">選ばれる3つの理由</div>
+      </div>
+      <div class="struct-item">
+        <div class="struct-num">6</div>
+        <div class="struct-name">Three E</div>
+        <div class="struct-desc">成功の3つの鍵</div>
+      </div>
+      <div class="struct-item">
+        <div class="struct-num">7</div>
+        <div class="struct-name">Specialist</div>
+        <div class="struct-desc">イベントのプロ集団</div>
+      </div>
+      <div class="struct-item">
+        <div class="struct-num">8</div>
+        <div class="struct-name">Flow</div>
+        <div class="struct-desc">ご依頼の流れ</div>
+      </div>
+      <div class="struct-item">
+        <div class="struct-num">9</div>
+        <div class="struct-name">FAQ</div>
+        <div class="struct-desc">よくある質問</div>
+      </div>
+      <div class="struct-item highlight">
+        <div class="struct-num">10</div>
+        <div class="struct-name">Team</div>
+        <div class="struct-desc">メンバー紹介</div>
+      </div>
+      <div class="struct-item">
+        <div class="struct-num">11</div>
+        <div class="struct-name">Company</div>
+        <div class="struct-desc">会社概要</div>
+      </div>
+      <div class="struct-item highlight">
+        <div class="struct-num">12</div>
+        <div class="struct-name">Contact</div>
+        <div class="struct-desc">お問い合わせフォーム</div>
+      </div>
+    </div>
+
+    <div class="options">
+      <label class="option">
+        <input type="radio" name="q3" value="ok">
+        <div class="option-content">
+          <div class="option-label">この構成でOK</div>
+        </div>
+      </label>
+      <label class="option">
+        <input type="radio" name="q3" value="remove">
+        <div class="option-content">
+          <div class="option-label">削りたいセクションがある</div>
+        </div>
+      </label>
+      <label class="option">
+        <input type="radio" name="q3" value="add">
+        <div class="option-content">
+          <div class="option-label">追加したいセクションがある</div>
+          <div class="option-desc">例：事例紹介、お客様の声、料金表 など</div>
+        </div>
+      </label>
+      <label class="option">
+        <input type="radio" name="q3" value="reorder">
+        <div class="option-content">
+          <div class="option-label">順番を変えたい</div>
+        </div>
+      </label>
+    </div>
+    <textarea class="free-text" placeholder="具体的にどのセクションを削る/追加/移動したいか"></textarea>
+  </div>
+
+  <!-- Q4: 写真 -->
+  <div class="section">
+    <div class="section-num">QUESTION 04</div>
+    <h2>写真・ビジュアル</h2>
+    <div class="options">
+      <label class="option">
+        <input type="radio" name="q4" value="ok">
+        <div class="option-content">
+          <div class="option-label">今の写真でOK</div>
+        </div>
+      </label>
+      <label class="option">
+        <input type="radio" name="q4" value="replace">
+        <div class="option-content">
+          <div class="option-label">実際のイベント写真に差し替えたい</div>
+          <div class="option-desc">写真素材をご提供いただければ差し替えます</div>
+        </div>
+      </label>
+      <label class="option">
+        <input type="radio" name="q4" value="mix">
+        <div class="option-content">
+          <div class="option-label">一部だけ差し替えたい</div>
+          <div class="option-desc">特定のセクションだけ変更</div>
+        </div>
+      </label>
+      <label class="option">
+        <input type="radio" name="q4" value="less">
+        <div class="option-content">
+          <div class="option-label">写真を減らしたい</div>
+          <div class="option-desc">テキスト中心でシンプルに</div>
+        </div>
+      </label>
+    </div>
+    <textarea class="free-text" placeholder="差し替えたい箇所や、提供可能な写真があれば"></textarea>
+  </div>
+
+  <!-- Q5: テキスト・コピー -->
+  <div class="section">
+    <div class="section-num">QUESTION 05</div>
+    <h2>テキスト・コピーライティング</h2>
+    <div class="options">
+      <label class="option">
+        <input type="radio" name="q5" value="ok">
+        <div class="option-content">
+          <div class="option-label">今の文章でOK</div>
+        </div>
+      </label>
+      <label class="option">
+        <input type="radio" name="q5" value="tone">
+        <div class="option-content">
+          <div class="option-label">トーンを変えたい</div>
+          <div class="option-desc">もっと堅く / もっとカジュアルに / もっと短く</div>
+        </div>
+      </label>
+      <label class="option">
+        <input type="radio" name="q5" value="content">
+        <div class="option-content">
+          <div class="option-label">内容を修正したい</div>
+          <div class="option-desc">事実と異なる箇所がある / 強調したいポイントが違う</div>
+        </div>
+      </label>
+      <label class="option">
+        <input type="radio" name="q5" value="rewrite">
+        <div class="option-content">
+          <div class="option-label">大幅に書き直したい</div>
+          <div class="option-desc">原稿をご提供いただくか、方向性を教えていただければ対応します</div>
+        </div>
+      </label>
+    </div>
+    <textarea class="free-text" placeholder="修正したい箇所や方向性があれば"></textarea>
+  </div>
+
+  <!-- Q6: CTA・お問い合わせ -->
+  <div class="section">
+    <div class="section-num">QUESTION 06</div>
+    <h2>CTA（お問い合わせへの誘導）</h2>
+    <div class="options">
+      <label class="option">
+        <input type="radio" name="q6" value="ok">
+        <div class="option-content">
+          <div class="option-label">このままでOK</div>
+          <div class="option-desc">現在：ページ内にCTAボタン2箇所 + 最下部にフォーム</div>
+        </div>
+      </label>
+      <label class="option">
+        <input type="radio" name="q6" value="external">
+        <div class="option-content">
+          <div class="option-label">外部フォームに飛ばしたい</div>
+          <div class="option-desc">既存のお問い合わせページやGoogleフォーム等にリンク</div>
+        </div>
+      </label>
+      <label class="option">
+        <input type="radio" name="q6" value="phone">
+        <div class="option-content">
+          <div class="option-label">電話番号も載せたい</div>
+        </div>
+      </label>
+      <label class="option">
+        <input type="radio" name="q6" value="change">
+        <div class="option-content">
+          <div class="option-label">ボタンの文言や配置を変えたい</div>
+        </div>
+      </label>
+    </div>
+    <textarea class="free-text" placeholder="リンク先URL、電話番号、ボタン文言の希望など"></textarea>
+  </div>
+
+  <!-- Q7: 優先度 -->
+  <div class="section">
+    <div class="section-num">QUESTION 07</div>
+    <h2>一番気になっている箇所</h2>
+    <p style="font-size:13px;color:#666;margin-bottom:12px">「ここだけは直したい」という箇所を教えてください。優先的に対応します。</p>
+    <textarea class="free-text" style="min-height:120px" placeholder="例：&#10;・ファーストビューのインパクトが弱い&#10;・実績数値をもっと目立たせたい&#10;・チームセクションの写真を差し替えたい"></textarea>
+  </div>
+
+  <!-- Q8: スケジュール -->
+  <div class="section">
+    <div class="section-num">QUESTION 08</div>
+    <h2>公開スケジュール</h2>
+    <div class="options">
+      <label class="option">
+        <input type="radio" name="q8" value="asap">
+        <div class="option-content">
+          <div class="option-label">できるだけ早く公開したい</div>
+        </div>
+      </label>
+      <label class="option">
+        <input type="radio" name="q8" value="april">
+        <div class="option-content">
+          <div class="option-label">4月中に公開できれば十分</div>
+        </div>
+      </label>
+      <label class="option">
+        <input type="radio" name="q8" value="nohurry">
+        <div class="option-content">
+          <div class="option-label">急がない — 内容を詰めてから</div>
+        </div>
+      </label>
+    </div>
+  </div>
+
+  <!-- 保存ボタン -->
+  <div class="save-area">
+    <button class="save-btn" onclick="saveAnswers()">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      回答を保存する
+    </button>
+    <p class="save-msg" id="saveMsg">保存しました</p>
+    <p class="save-note">ボタンを押すと、回答内容がテキストファイルとしてダウンロードされます。<br>そのまま担当者にお送りください。</p>
+  </div>
+
+</div>
+
+<script>
+// 選択時のハイライト
+document.querySelectorAll('.option').forEach(opt => {
+  const input = opt.querySelector('input');
+  input.addEventListener('change', () => {
+    const name = input.name;
+    document.querySelectorAll(`input[name="${name}"]`).forEach(r => {
+      r.closest('.option').classList.remove('selected');
+    });
+    opt.classList.add('selected');
+  });
+});
+
+// 回答を保存
+function saveAnswers() {
+  const questions = {
+    q1: 'Q1. 全体の印象・トーン',
+    q2: 'Q2. ファーストビュー',
+    q3: 'Q3. セクション構成',
+    q4: 'Q4. 写真・ビジュアル',
+    q5: 'Q5. テキスト・コピーライティング',
+    q6: 'Q6. CTA（お問い合わせへの誘導）',
+    q8: 'Q8. 公開スケジュール'
+  };
+
+  const labels = {};
+  document.querySelectorAll('.option').forEach(opt => {
+    const input = opt.querySelector('input');
+    const label = opt.querySelector('.option-label');
+    if (input && label) {
+      if (!labels[input.name]) labels[input.name] = {};
+      labels[input.name][input.value] = label.textContent;
+    }
+  });
+
+  let text = '═══════════════════════════════════════\n';
+  text += '  FLAT BASE LP修正 ヒアリングシート 回答\n';
+  text += '  回答日: ' + new Date().toLocaleDateString('ja-JP') + '\n';
+  text += '═══════════════════════════════════════\n\n';
+
+  const textareas = document.querySelectorAll('.free-text');
+  let taIdx = 0;
+
+  for (const [name, title] of Object.entries(questions)) {
+    const selected = document.querySelector(`input[name="${name}"]:checked`);
+    text += '───────────────────────────────────────\n';
+    text += title + '\n';
+    text += '───────────────────────────────────────\n';
+    if (selected) {
+      text += '→ ' + (labels[name]?.[selected.value] || selected.value) + '\n';
+    } else {
+      text += '→ （未回答）\n';
+    }
+    text += '\n';
+  }
+
+  // Q7（自由記述のみ）
+  text += '───────────────────────────────────────\n';
+  text += 'Q7. 一番気になっている箇所\n';
+  text += '───────────────────────────────────────\n';
+
+  // テキストエリアの自由記述を収集
+  text += '\n';
+  text += '═══════════════════════════════════════\n';
+  text += '  自由記述（補足コメント）\n';
+  text += '═══════════════════════════════════════\n\n';
+
+  const sectionTitles = [
+    'Q1 補足', 'Q2 補足', 'Q3 補足', 'Q4 補足',
+    'Q5 補足', 'Q6 補足', 'Q7 一番気になっている箇所'
+  ];
+
+  textareas.forEach((ta, i) => {
+    const val = ta.value.trim();
+    if (val) {
+      text += (sectionTitles[i] || 'その他') + ':\n';
+      text += val + '\n\n';
+    }
+  });
+
+  // ダウンロード
+  const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'FLATBASE_LP修正_ヒアリング回答_' + new Date().toISOString().slice(0, 10) + '.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+
+  // メッセージ表示
+  const msg = document.getElementById('saveMsg');
+  msg.classList.add('show');
+  setTimeout(() => msg.classList.remove('show'), 3000);
+}
+</script>
+</body>
+</html>
