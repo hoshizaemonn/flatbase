@@ -1183,8 +1183,8 @@ body.Page_Contact.menu_closing_stage2 .Menu {
   display: flex;
   align-items: center;
   min-height: 100vh;
-  padding-top: 150px;
-  padding-bottom: 150px;
+  padding-top: 150px !important;
+  padding-bottom: 150px !important;
 }
 .Unique-value_wrapper {
   max-width: 1440px;
